@@ -1,0 +1,21 @@
+export default {
+	  "play": "",
+	  "welcome_title": "",
+	  "welcome_desc": "",
+	  "return_home" : "",
+	  "credits": "",
+	  "win": "",
+	  "lose": "",
+	  "createdBy": "",
+	  "graphics": "",
+	  "thanks": "",
+	  "looking": "",
+	  "broken_glass": "",
+	  "eat":"",
+	  "patator":"",
+          "sell": "",
+    "wave": "",
+    "final_fries": "",
+    "potato_field": "",
+    "harvest" : ""
+}

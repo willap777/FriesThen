@@ -1,0 +1,186 @@
+    #app{
+      height: 100vh;
+      overflow:hidden;
+    }
+
+    .gamescreen{
+      position:absolute;
+      top:2.5%;
+      right: 2.5%;
+      height: 95%;
+      width: 95%;
+      border: black 5px double;
+    }
+
+    .gamescreen > div{
+      height:100%;
+      width:100%;
+    }
+
+    #version{
+      position:absolute;
+      bottom:0;
+      right:10px;
+      font-size:0.6em;
+    }
+
+    #play-box{
+	position:relative;
+	top:0;
+	width:100%;
+	height:80%;
+	overflow:hidden;
+	background: #DDD;
+    }
+
+    #commands-box{
+	border-top: double 3px black;
+	margin:auto;
+	width: calc(95% - 10px);
+	height:20%;
+	font-size:0.6em;
+    }
+    
+    #commands-box > div
+    {
+	height:100%;
+    }
+
+     #commands-box div div
+    {
+	height:50%;
+    }
+
+    #play-box > div{
+	background:white;
+			height:calc(13.5vmin - 1px);
+		width:81vmin;
+		margin:auto;
+
+    }
+
+
+    #commands-box div div{
+	border:solid 1px black;
+    }
+
+    #commands-box div div:active{
+	background:#ccc;
+    }
+    
+    .pathTile{
+	background:#cc6600;
+    }
+
+     .firstPathTile{
+	background-image:linear-gradient(#ffffff 0%, #cc6600 75%);
+    }
+
+    .lastPathTile{
+	background-image:radial-gradient(red 50%, #cc6600 51%, #cc6600);
+	padding-top:2%;
+    }
+    
+    .opponent{
+	position:absolute;
+	background-image:linear-gradient(-40deg, black, blue, #fff) !important;
+	box-shadow: 2px 3px 3px rgba(0,0,0,0.7);
+	border-radius:50%;
+    }
+
+    .super.opponent{
+	background-image:linear-gradient(-40deg, black, yellow, #fff) !important;
+    }
+
+    .lifeBar{
+	background:red;
+	margin:auto;
+	height:5px;
+    }
+
+    .firingBar{
+	background:blue;
+	height:5px;
+    }
+
+
+    .range{
+	position:absolute;
+	z-index : 100;
+	top:-100%;
+	left: -100%;
+	width: 300%;
+	height: 300%;
+	border:2px solid darkgray;
+	background:rgba(50,50,50,0.2);;
+	border-radius : 50%;
+	pointer-events: none;
+    }
+
+    .defense .patator{
+	width: 60%;
+	top:40%;
+	height: 20%;
+	background-image:linear-gradient(-1deg, #333 0%, darkgrey 25%, lightgrey);
+	box-shadow: 2px 3px 3px grey;
+    }
+
+    .defense .broken_glass{
+	width: 80%;
+	top:10%;
+	height: 80%;
+        background:lightblue;
+	border:2px dashed darkblue;
+    }
+
+    .defense .potato_field{
+	width: 80%;
+	top:10%;
+	height: 80%;
+        background:#a52a2a;
+	background-image:radial-gradient(#651a1a 20%, #a52a2a);
+	border:2px solid #651a1a;
+    }
+    
+    /*small...*/
+    @media (min-width: 576px){
+	#commands-box, #play-box{
+	    height:100%;
+	}
+
+#play-box{
+	    height:100%;
+	}
+
+
+	#commands-box{
+	    border-top :none;
+	    border-left:double 3px black;
+	    font-size:initial;
+	}
+
+	
+	    #commands-box > div
+	    {
+		height:50%;
+	    }
+
+	    #commands-box div div
+	    {
+		height:50%;
+	    }
+
+	    #play-box > div{
+		height:calc(10vmin - 1px);
+		width:60vmin;
+		border-left: black 3px double;
+		border-right: black 3px double;
+	    }
+
+
+    }
+
+    /*medium...*/
+    @media (min-width: 768px){
+	
+    }

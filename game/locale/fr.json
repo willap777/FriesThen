@@ -1,0 +1,21 @@
+{
+    "play" : "Jouer",    
+    "welcome_title": "Bienvenue sur Frites Alors!!!",
+    "welcome_desc": "Le jeu où il faut protéger son lot de frites des envahisseurs affamés!",
+    "return_home": "Retour au début",
+    "credits": "Crédits",
+    "win": "Vous avez gagné!!!",
+    "lose": "Il n'y a plus de frites :( Vous avez perdu...",
+    "createdBy": "Jeu créé par :",
+    "graphics": "Graphismes :",
+    "thanks": "Remerciements :",
+    "looking": "Présentement à la recherche de quelqu'un pour le faire. <br /> Contactez Skarn via <a href=\"mailto:skarn@ti-ssi.com\">skarn@ti-ssi.com</a>",
+    "broken_glass":"Verre cassé",
+    "eat":"Manger",
+    "patator":"Lance-Patate",
+    "sell": "Vendre",
+    "wave": "Vague",
+    "final_fries": "Frites restantes : ",
+    "potato_field": "Champ de patates",
+    "harvest" : "Récolter"
+}
