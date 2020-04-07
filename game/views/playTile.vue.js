@@ -66,7 +66,7 @@ export default{
 	    <div class="firingBar" v-bind:style="{width:hasItem().passedTick/90*100+'%'}">
        	    </div>
 	</div>
-    	<span v-else-if="isLast">{{ game.frites }}F</span>
+    	<span id="fry-count" v-else-if="isLast">{{ game.frites }}F</span>
 	<div v-else-if="!hasItem()">&nbsp;</div>
     </div>
     `
