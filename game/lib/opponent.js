@@ -67,10 +67,10 @@ constructor(
 	    && t.y >= tile.y && t.y < tile.yy) {
 		t.isOn = i;
 		if(t.beforeCenter
-		   &&   ((t.y < (tile.y + (tile.h / 2))  && t.comingFrom == 0)
-		       || (t.x > (tile.x + (tile.w / 2)) && t.comingFrom == 1)
-		       || (t.y > (tile.y + (tile.h / 2)) && t.comingFrom == 2)
-		       || (t.x < (tile.x + (tile.w / 2)) && t.comingFrom == 3)
+		   &&   ((t.y < (tile.y + (tile.h / 2)-10)  && t.comingFrom == 0)
+		       || (t.x > (tile.x + (tile.w / 2)-5) && t.comingFrom == 1)
+		       || (t.y > (tile.y + (tile.h / 2)-10) && t.comingFrom == 2)
+		       || (t.x < (tile.x + (tile.w / 2)-5) && t.comingFrom == 3)
 		      )
 		){
 		    t.beforeCenter = false;
