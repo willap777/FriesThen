@@ -11,14 +11,14 @@ export default {
 	}
     },
     computed:{
-	width: function() { return this.game.map.meta[this.game.map.path[0]].w / 2},
-	height: function(){ return this.game.map.meta[this.game.map.path[0]].h / 2}
+	width: function() { return this.game.map.meta[this.game.map.path[0]].w / 1.5},
+	height: function(){ return this.game.map.meta[this.game.map.path[0]].h / 1.5}
     },
     template:`
-	<div class="opponent" v-bind:class="{'super':wave.waveNb == 10}" v-bind:style="{top:self.y+'px',left:self.x+'px', zIndex:'1000', width:width+'px', height:height+'px'}" v-on:click="iGame.selected(game.map.path[self.isOn])">
-
+	<div class="opponent" style="background:transparent" v-bind:class="{'super':wave.waveNb == 10}" v-bind:style="{top:self.y+'px',left:self.x+'px', zIndex:'1000', width:width+'px', height:height+'px'}" v-on:click="iGame.selected(game.map.path[self.isOn])">
         <div class="lifeBar" v-bind:style="{width:self.life/self.startingLife*100+'%'}">
-	</div>
+        </div>
+        <img src="img/mouse.png" width="100%"/>
     </div>
     `
 }
