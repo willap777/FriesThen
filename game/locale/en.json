@@ -18,5 +18,6 @@
     "final_fries": "Fries left : ",
     "potato_field": "Potatos Field",
     "harvest" : "Harvest",
-    "upgrade" : "Upgrade weapon!"
+    "upgrade" : "Upgrade the",    
+    "helpers": "Associate developers:"
 }

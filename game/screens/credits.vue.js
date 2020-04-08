@@ -15,8 +15,13 @@ export default {
 		    Skarn
                   </div>
                   <div>
+                  <b>{{ text.helpers }}</b><br />
+                  </div>
+        Willap777<br />
+        Xavier_Begin (À modifier)
+                  <div>
                     <b>{{ text.graphics }}</b><br />
-		    <span v-html="text.looking"> </span>
+		    Willap777
                   </div>
                   <div>
 		    <b>{{ text.thanks }}</b> <br />
