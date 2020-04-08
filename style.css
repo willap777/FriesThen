@@ -80,7 +80,6 @@
     
     .opponent{
 	position:absolute;
-	background:transparent;
     }
 
     .super.opponent{
@@ -107,7 +106,6 @@
 	width: 300%;
 	height: 300%;
 	border:2px solid darkgray;
-	background:rgba(50,50,50,0.2);;
 	border-radius : 50%;
 	pointer-events: none;
     }

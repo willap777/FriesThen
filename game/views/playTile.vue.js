@@ -30,14 +30,21 @@ export default{
 	      },
     },
     methods:{
-          hasItem:function(){
+		hasItem:function(){
 	        if(!(this.game.defenses[this.id] === undefined)){
 		       return this.game.defenses[this.id];
 		}else{
 			return false;
 		}
-		;//&& !this.isSelected;
-	}
+		//&& !this.isSelected;
+		},
+		rangeColor:function(){
+			let u = this.hasItem().currentUpgrade;
+			return `rgba(${u*80},${255-u*80},${128},0.5)`;
+		},
+		rangeWidth:function(){
+			let u = this.hasItem().currentUpgrade;
+		}
     },
     mounted:function(){
 	if(this.isPath){
@@ -61,7 +68,9 @@ export default{
 	<span v-else>&nbsp;</span>
         </div>
 	
-	<div class="range" v-if="hasItem() && !isPath && isSelected" >&nbsp;</div>
+	<div class="range"
+	v-bind:style="{background:rangeColor()}"	
+	v-if="hasItem() && !isPath && isSelected" >&nbsp;</div>
         <div class="bg-secondary" v-if="hasItem() && !isPath" style="width:50%;margin:auto;">
 	    <div class="firingBar" v-bind:style="{width:hasItem().passedTick/90*100+'%'}">
        	    </div>
