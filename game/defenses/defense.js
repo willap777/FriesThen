@@ -27,6 +27,7 @@ export default class{
 		if(Game.state.cash>=upgradeCost){
 			Game.state.cash-=upgradeCost;
 			this.currentUpgrade++;
+			this.price+=upgradeCost;
 		}
 	}	
 
