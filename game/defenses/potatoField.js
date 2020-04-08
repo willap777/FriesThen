@@ -21,7 +21,13 @@ export default class extends Defense{
 
     harvest(){
 	let harvestAmount = 0;
-	harvestAmount+=this.count*5;
+	switch(this.count){
+		case 4 :  harvestAmount += 20;
+		case 3 :  harvestAmount += 15;
+		case 2 :  harvestAmount += 10;
+		case 1 :  harvestAmount += 5;
+		case 0 :  harvestAmount += 0;
+	}
 	this.count = 0;
 	Game.state.cash += harvestAmount;
     }
