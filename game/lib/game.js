@@ -38,7 +38,7 @@ class GameState{
 	  wave : 0,
 	  oppId: 0,
 	  opponents:[],
-	  defenses:{}
+	  defenses:{}	  
       };
     }
     

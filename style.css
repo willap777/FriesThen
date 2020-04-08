@@ -35,6 +35,7 @@
 
     #commands-box{
 	border-top: double 3px black;
+	background:lightslategray;
 	margin:auto;
 	width: calc(95% - 10px);
 	height:20%;
@@ -46,7 +47,7 @@
 	height:100%;
     }
 
-     #commands-box div div
+    #commands-box div div
     {
 	height:50%;
     }
@@ -56,12 +57,6 @@
 			height:calc(13.5vmin - 1px);
 		width:81vmin;
 		margin:auto;
-
-    }
-
-
-    #commands-box div div{
-	border:solid 1px black;
     }
 
     #commands-box div div:active{
@@ -69,23 +64,22 @@
     }
     
     .pathTile{
-	background:#cc6600;
+		background-image: url('img/ground.png');
+		background-size: 100%;
     }
 
      .firstPathTile{
-	background-image:linear-gradient(#ffffff 0%, #cc6600 75%);
+	background-image: url('img/darkground.png');
     }
 
     .lastPathTile{
-	background-image:radial-gradient(red 50%, #cc6600 51%, #cc6600);
+	background-image: url('img/frites.png');
+	background-size: 100%;
 	padding-top:2%;
     }
     
     .opponent{
 	position:absolute;
-	background-image:linear-gradient(-40deg, black, blue, #fff) !important;
-	box-shadow: 2px 3px 3px rgba(0,0,0,0.7);
-	border-radius:50%;
     }
 
     .super.opponent{
@@ -109,10 +103,7 @@
 	z-index : 100;
 	top:-100%;
 	left: -100%;
-	width: 300%;
-	height: 300%;
 	border:2px solid darkgray;
-	background:rgba(50,50,50,0.2);;
 	border-radius : 50%;
 	pointer-events: none;
     }
@@ -137,8 +128,8 @@
 	width: 80%;
 	top:10%;
 	height: 80%;
-        background:#a52a2a;
-	background-image:radial-gradient(#651a1a 20%, #a52a2a);
+	background-image:url('img/champ_patate.png');
+	background-size: 100%;
 	border:2px solid #651a1a;
     }
     
@@ -173,8 +164,6 @@
 	    #play-box > div{
 		height:calc(10vmin - 1px);
 		width:60vmin;
-		border-left: black 3px double;
-		border-right: black 3px double;
 	    }
 
 
@@ -183,4 +172,35 @@
     /*medium...*/
     @media (min-width: 768px){
 	
-    }
+	}
+	
+	#fry-count{
+		font-weight:bold;
+		color:white;
+		text-shadow:1px 1px black, 0px 1px black, -1px 1px black,
+		1px -1px black, 0px -1px black, -1px -1px black,
+		1px 0px black, -1px 0px black;    	 
+	}
+
+	.p-0.col-2:not(.pathTile):not(.patator):not(.bg-secondary):not(.broken_glass):not(.potato_field){
+		background-image: url(img/grass.png);
+		background-size: 100%;
+	}
+
+	.col-3.col-sm-6:not(.text-right){
+		display:flex;
+		align-items:center;
+		justify-content: center;
+	}
+
+	.col-3.col-sm-6{
+		border-radius:10px;
+		background-image:linear-gradient(lightcyan,white);
+		border: 3px inset #227;
+		cursor: pointer;
+	}
+
+	.potato_field > div{
+		color:white;
+		font-weight:bold;
+	}

@@ -24,12 +24,17 @@ export default {
                 {{ defense().price / 2}} $
 	</div>
 	<div class="col-3 col-sm-6">
-	     <div v-if="defense().name == 'potato_field'" v-on:click="defense().harvest()">
+		<div v-if="defense().name == 'potato_field'" v-on:click="defense().harvest()">
 	        {{ text.harvest }}
-             </div>
+		</div>
+		<div v-if="defense().name == 'patator' && defense().currentUpgrade <  2" v-on:click="defense().upgrade()">
+		{{ text.upgrade }} {{text.patator}}<br>{{ defense().upgradeCosts[defense().currentUpgrade]}} $
+		</div>
 	</div>
 	<div class="col-3 col-sm-6">
-		
+		<div v-if="defense().name == 'potato_field' && defense().currentUpgrade <  2" v-on:click="defense().upgrade()">
+		{{ text.upgrade }} {{text.potato_field}}<br>{{ defense().upgradeCosts[defense().currentUpgrade]}} $
+		</div>			
 	</div>
 	<div class="col-3 col-sm-6">
 		
