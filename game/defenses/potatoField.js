@@ -3,7 +3,7 @@ import {Game} from '../lib/game.js';
 
 export default class extends Defense{
     constructor(){
-	super('potato_field', 150);
+	super('potato_field', 150, [100,250]);
 	this.max = 4;
 	this.count = 0;
     }
@@ -17,8 +17,8 @@ export default class extends Defense{
 	if(this.count < this.max ) {
 	    this.count++;
 	}
-    }
-
+	}
+	
     harvest(){
 	let harvestAmount = 0;
 	let bonus=this.currentUpgrade*5;
