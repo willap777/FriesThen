@@ -13,13 +13,13 @@ export default{
       }
     },
     components:{
-      general: commandGeneral,
-      selected: commandSelected,
-      mapPath: commandPath,
-      lastPathTile: commandLast,
-      itemTile: commandItem
+	general: commandGeneral,
+	selected: commandSelected,
+	mapPath: commandPath,
+	lastPathTile: commandLast,
+	itemTile: commandItem
     },
-    template :`    
+    template : `
     <div id="commands-box" class="text-center col-12 col-sm-3">	
      	<component class="row" v-bind:is="game.commandView"></component>  
     </div>
