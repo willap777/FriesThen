@@ -1,5 +1,5 @@
 {
-    "play" : "Jouer",    
+    "alea" : "Jouer à une niveau aléatoire!",    
     "welcome_title": "Bienvenue sur Frites Alors!!!",
     "welcome_desc": "Le jeu où il faut protéger son lot de frites des envahisseurs affamés!",
     "return_home": "Retour au début",
@@ -19,5 +19,8 @@
     "potato_field": "Champ de patates",
     "harvest" : "Récolter",
     "upgrade": "Améliorez le", 
-    "helpers": "Développeurs associés:"
+    "helpers": "Développeurs associés:",
+    "play": "Jouer!",
+    "map": "Niveau",
+    "selectMap": "Choix du niveau"
 }

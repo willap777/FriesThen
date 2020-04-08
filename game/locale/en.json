@@ -1,5 +1,5 @@
 {
-    "play" : "Play",
+    "alea" : "Play random map",
     "welcome_title": "Welcome to Fries Then!!!",
     "welcome_desc": "A game where you must protect your frenchfries from a hungry mobs!",
     "return_home": "Back Home",
@@ -19,5 +19,8 @@
     "potato_field": "Potatos Field",
     "harvest" : "Harvest",
     "upgrade" : "Upgrade the",    
-    "helpers": "Associate developers:"
+    "helpers": "Associate developers:",
+    "play": "Play!",
+    "map": "Map",
+    "selectMap": "Map selection"
 }

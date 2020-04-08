@@ -1,206 +1,221 @@
-    #app{
-      height: 100vh;
-      overflow:hidden;
-    }
+#app{
+	height: 100vh;
+	overflow:hidden;
+}
 
-    .gamescreen{
-      position:absolute;
-      top:2.5%;
-      right: 2.5%;
-      height: 95%;
-      width: 95%;
-      border: black 5px double;
-    }
+.gamescreen{
+	position:absolute;
+	top:2.5%;
+	right: 2.5%;
+	height: 95%;
+	width: 95%;
+	border: black 5px double;
+}
 
-    .gamescreen > div{
-      height:100%;
-      width:100%;
-    }
+.gamescreen > div{
+	height:100%;
+	width:100%;
+}
 
-    #version{
-      position:absolute;
-      bottom:0;
-      right:10px;
-      font-size:0.6em;
-    }
+#version{
+	position:absolute;
+	bottom:0;
+	right:10px;
+	font-size:0.6em;
+}
 
-    #play-box{
+#play-box{
 	position:relative;
 	top:0;
 	width:100%;
 	height:80%;
 	overflow:hidden;
 	background: #DDD;
-    }
+}
 
-    #commands-box{
+#commands-box{
 	border-top: double 3px black;
 	background:lightslategray;
 	margin:auto;
 	width: calc(95% - 10px);
 	height:20%;
 	font-size:0.6em;
-    }
-    
-    #commands-box > div
-    {
+}
+
+#commands-box > div
+{
 	height:100%;
-    }
+}
 
-    #commands-box div div
-    {
+#commands-box div div
+{
 	height:50%;
-    }
+}
 
-    #play-box > div{
+#play-box > div{
 	background:white;
-			height:calc(13.5vmin - 1px);
-		width:81vmin;
-		margin:auto;
-    }
+	height:calc(13.5vmin - 1px);
+	width:81vmin;
+	margin:auto;
+}
 
-    #commands-box div div:active{
+#commands-box div div:active{
 	background:#ccc;
-    }
-    
-    .pathTile{
-		background-image: url('img/ground.png');
-		background-size: 100%;
-    }
+}
 
-     .firstPathTile{
+.pathTile{
+	background-image: url('img/ground.png');
+	background-size: 100%;
+}
+
+.firstPathTile{
 	background-image: url('img/darkground.png');
-    }
+}
 
-    .lastPathTile{
+.lastPathTile{
 	background-image: url('img/frites.png');
 	background-size: 100%;
 	padding-top:2%;
-    }
-    
-    .opponent{
+}
+
+.opponent{
 	position:absolute;
-    }
+}
 
-    .super.opponent{
+.super.opponent{
 	background-image:linear-gradient(-40deg, black, yellow, #fff) !important;
-    }
+}
 
-    .lifeBar{
+.lifeBar{
 	background:red;
 	margin:auto;
 	height:5px;
-    }
+}
 
-    .firingBar{
+.firingBar{
 	background:blue;
 	height:5px;
-    }
+}
 
 
-    .range{
+.range{
 	position:absolute;
 	z-index : 100;
-	top:-100%;
-	left: -100%;
 	border:2px solid darkgray;
 	border-radius : 50%;
 	pointer-events: none;
-    }
+}
 
-    .defense .patator{
+.defense .patator{
 	width: 60%;
 	top:40%;
 	height: 20%;
 	background-image:linear-gradient(-1deg, #333 0%, darkgrey 25%, lightgrey);
 	box-shadow: 2px 3px 3px grey;
-    }
+}
 
-    .defense .broken_glass{
+.defense .broken_glass{
 	width: 80%;
 	top:10%;
 	height: 80%;
-        background:lightblue;
+		background:lightblue;
 	border:2px dashed darkblue;
-    }
+}
 
-    .defense .potato_field{
+.defense .potato_field{
 	width: 80%;
 	top:10%;
 	height: 80%;
 	background-image:url('img/champ_patate.png');
 	background-size: 100%;
 	border:2px solid #651a1a;
-    }
-    
-    /*small...*/
-    @media (min-width: 576px){
-	#commands-box, #play-box{
-	    height:100%;
-	}
+}
+
+/*small...*/
+@media (min-width: 576px){
+#commands-box, #play-box{
+	height:100%;
+}
 
 #play-box{
-	    height:100%;
-	}
+	height:100%;
+}
 
 
-	#commands-box{
-	    border-top :none;
-	    border-left:double 3px black;
-	    font-size:initial;
-	}
-
-	
-	    #commands-box > div
-	    {
-		height:50%;
-	    }
-
-	    #commands-box div div
-	    {
-		height:50%;
-	    }
-
-	    #play-box > div{
-		height:calc(10vmin - 1px);
-		width:60vmin;
-	    }
+#commands-box{
+	border-top :none;
+	border-left:double 3px black;
+	font-size:initial;
+}
 
 
-    }
+#commands-box > div
+{
+	height:50%;
+}
 
-    /*medium...*/
-    @media (min-width: 768px){
-	
-	}
-	
-	#fry-count{
-		font-weight:bold;
-		color:white;
-		text-shadow:1px 1px black, 0px 1px black, -1px 1px black,
-		1px -1px black, 0px -1px black, -1px -1px black,
-		1px 0px black, -1px 0px black;    	 
-	}
+#commands-box div div
+{
+	height:50%;
+}
 
-	.p-0.col-2:not(.pathTile):not(.patator):not(.bg-secondary):not(.broken_glass):not(.potato_field){
-		background-image: url(img/grass.png);
-		background-size: 100%;
-	}
+#play-box > div{
+	height:calc(10vmin - 1px);
+	width:60vmin;
+}
 
-	.col-3.col-sm-6:not(.text-right){
-		display:flex;
-		align-items:center;
-		justify-content: center;
-	}
 
-	.col-3.col-sm-6{
-		border-radius:10px;
-		background-image:linear-gradient(lightcyan,white);
-		border: 3px inset #227;
-		cursor: pointer;
-	}
+}
 
-	.potato_field > div{
-		color:white;
-		font-weight:bold;
-	}
+/*medium...*/
+@media (min-width: 768px){
+
+}
+
+#fry-count{
+	font-weight:bold;
+	color:white;
+	text-shadow:1px 1px black, 0px 1px black, -1px 1px black,
+	1px -1px black, 0px -1px black, -1px -1px black,
+	1px 0px black, -1px 0px black;    	 
+}
+
+.p-0.col-2:not(.pathTile):not(.patator):not(.bg-secondary):not(.broken_glass):not(.potato_field){
+	background-image: url(img/grass.png);
+	background-size: 100%;
+}
+
+.col-3.col-sm-6:not(.text-right){
+	display:flex;
+	align-items:center;
+	justify-content: center;
+}
+
+.col-3.col-sm-6{
+	border-radius:10px;
+	background-image:linear-gradient(lightcyan,white);
+	border: 3px inset #227;
+	cursor: pointer;
+}
+
+.potato_field > div{
+	color:white;
+	font-weight:bold;
+}
+
+#map-selection{
+	margin:20px;
+	padding:20px;
+	background:	#fcb;
+	display:inline-block;
+	border:3px inset lightslategray; 
+}
+
+.map-option{
+	margin:10px;
+	padding:10px 20px;
+	background:white;
+	border:1px solid black;
+	border-radius:5px;
+}
+
