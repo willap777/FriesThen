@@ -5,7 +5,7 @@ import commandsView from '../views/commandsView.vue.js';
 
 export default
 function(resolve){
-    $.getJSON( '/game/maps/2.json', function( json ) {
+    $.getJSON( './game/maps/2.json', function( json ) {
     	Game.state.map = json;
 
     resolve({
