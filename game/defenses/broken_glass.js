@@ -3,13 +3,13 @@ import {Game} from '../lib/game.js';
 
 export default class extends Defense{
     constructor(){
-	super('broken_glass',10);
+	super('broken_glass');
     }
     stepOn(opp){
-		opp.loseLife(1);
-		this.count--;
-		if(this.count <= 0){
-		Vue.delete(Game.state.defenses, this.tile);
-		}
-	}	
-}
+		      opp.loseLife(1);
+		      this.count--;
+		      if(this.count <= 0){
+			  Vue.delete(Game.state.defenses, this.tile);
+		      }
+		  }
+	      }
