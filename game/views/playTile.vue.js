@@ -30,14 +30,31 @@ export default{
 	      },
     },
     methods:{
-          hasItem:function(){
+		hasItem:function(){
 	        if(!(this.game.defenses[this.id] === undefined)){
 		       return this.game.defenses[this.id];
 		}else{
 			return false;
 		}
-		;//&& !this.isSelected;
-	}
+		//&& !this.isSelected;
+		},
+		rangeStyle:function(){
+			let u = this.hasItem().currentUpgrade;
+			let name=this.hasItem().name;
+			let sizeinc=300,offsetinc=-100;
+			if(name == 'patator')
+			{
+				sizeinc+=100*u;
+				offsetinc-=50*u;
+			}
+			return {
+				background:`rgba(${u*80}, ${255-u*80}, 128, 0.5)`,
+				width: sizeinc+'%',
+				height: sizeinc+'%',
+				top: offsetinc +'%',
+				left: offsetinc +'%'
+			}
+		}
     },
     mounted:function(){
 	if(this.isPath){
@@ -59,14 +76,16 @@ export default{
 	{{ hasItem().count }}
 	</div>
 	<span v-else>&nbsp;</span>
-        </div>
+	</div>
 	
-	<div class="range" v-if="hasItem() && !isPath && isSelected" >&nbsp;</div>
+	<div class="range"
+	v-bind:style="rangeStyle()"	
+	v-if="hasItem() && !isPath && isSelected" >&nbsp;</div>
         <div class="bg-secondary" v-if="hasItem() && !isPath" style="width:50%;margin:auto;">
 	    <div class="firingBar" v-bind:style="{width:hasItem().passedTick/90*100+'%'}">
        	    </div>
 	</div>
-    	<span v-else-if="isLast">{{ game.frites }}F</span>
+    	<span id="fry-count" v-else-if="isLast">{{ game.frites }}F</span>
 	<div v-else-if="!hasItem()">&nbsp;</div>
     </div>
     `
