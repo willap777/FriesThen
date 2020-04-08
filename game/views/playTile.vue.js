@@ -41,9 +41,6 @@ export default{
 		rangeColor:function(){
 			let u = this.hasItem().currentUpgrade;
 			return `rgba(${u*80},${255-u*80},${128},0.5)`;
-		},
-		rangeWidth:function(){
-			let u = this.hasItem().currentUpgrade;
 		}
     },
     mounted:function(){
