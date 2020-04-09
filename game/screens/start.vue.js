@@ -16,8 +16,19 @@ export default {
                     <h1>{{ text.welcome_title }}</h1>
                     <span>{{ text.welcome_desc }} </span>
                   </div>
-                  <div class="mt-2 mt-md-5"><button v-on:click="game.screen = 'play'" class="btn btn-success btn-lg">{{ text.play }}</button></div>
+                  <div id="map-selection">
+                    <h3>{{text.selectMap}}</h3>
+                    <div class="map-option" v-for="indmap in game.mapCount">
+                      <h4>
+                        {{ text.map }} #{{ indmap }} &nbsp;
+                        <button v-on:click="game.screen = 'play';game.currentMap=indmap">
+                          {{text.play}}
+                        </button>
+                      </h4>
+                    </div>                    
+                  </div>
+                  <div class="mt-2 mt-md-5"><button v-on:click="game.screen = 'play'; game.currentMap=0" class="btn btn-success btn-lg">{{ text.alea }}</button></div>
                   <div class="mt-2 mt-md-5"><button v-on:click="game.screen = 'credit'" class="btn btn-secondary btn-lg">{{ text.credits }}</button></div>
             </div>
           </div>`
-  }  
+  }//rendre l'outil de sélection de maps dynamique  

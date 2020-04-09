@@ -18,7 +18,7 @@ export default class extends Defense{
 			this.rot=Math.atan2(opp.y - tile.top, opp.x - tile.left) * 180 / Math.PI;
 			if((this.passedTick >= 90)){
 			this.passedTick = 0;
-			opp.loseLife(1+0.5*this.currentUpgrade);
+			opp.loseLife(1+this.currentUpgrade);
 			}
 		}
 	}
