@@ -1,5 +1,4 @@
 import {Game} from '../lib/game.js';
-import {Wave} from '../lib/wave.js';
 
 import commandLifeTile from './commandLifeTile.vue.js';
 
@@ -7,14 +6,14 @@ export default  {
     data: function (){
       return{
    	  text : Game.locale.text,
-	   game : Game.state,
+	   game : Game.state
       }
     },
     methods:{
 	loseLife: function(){
 		  this.game.frites--;
 		  if(this.game.frites <= 0){
-				Wave.start('game-over');
+		  		      game.state.screen = 'game-over';
 		  }
 
 	}
