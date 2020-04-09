@@ -14,7 +14,7 @@ function(resolve){
       map_ind = 1 + Math.floor(mapCount*Math.random());
     }
 
-    $.getJSON( `/game/maps/maps.json`, function( json ) {
+    $.getJSON( `./game/maps/maps.json`, function( json ) {
     Game.state.map = json[map_ind-1];
 
     resolve({
