@@ -7,14 +7,15 @@ export default  {
     data: function (){
       return{
    	  text : Game.locale.text,
-	   game : Game.state,
+	   game : Game.state
       }
     },
     methods:{
 	loseLife: function(){
 		  this.game.frites--;
 		  if(this.game.frites <= 0){
-				Wave.start('game-over');
+				Wave.start(Game.state);
+				Game.state.screen='game-over';
 		  }
 
 	}
