@@ -60,7 +60,7 @@ export default{
 			if(this.hasItem().name=='patator')
 				return this.hasItem().passedTick/90*100+'%';
 			else{
-				if(this.hasItem.name=='sniper')
+				if(this.hasItem().name=='sniper')
 					return this.hasItem().passedTick/150*100+'%';
 			}
 		}

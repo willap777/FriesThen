@@ -97,7 +97,6 @@
 	height:5px;
 }
 
-
 .range{
 	position:absolute;
 	z-index : 100;
@@ -109,8 +108,16 @@
 .defense .patator{
 	width: 90%;
 	top:40%;
-	height: 22%;
+	height: 20%;
 	background-image:url('img/patator.png');
+	background-size: 100%;
+}
+
+.defense .sniper{
+	width: 90%;
+	top:40%;
+	height: 20%;
+	background-image:url('img/sniper.png');
 	background-size: 100%;
 }
 
@@ -204,18 +211,30 @@
 }
 
 #map-selection{
+	color:white;
 	margin:20px;
 	padding:20px;
-	background:	#fcb;
+	background:	#c23;
 	display:inline-block;
 	border:3px inset lightslategray; 
+	border-radius:5px;
 }
 
 .map-option{
+	color:black;
 	margin:10px;
 	padding:10px 20px;
 	background:white;
 	border:1px solid black;
 	border-radius:5px;
+}
+
+.map-container{
+	padding:10px;
+	background:darkgrey;
+	overflow-y: visible;
+	max-height:400px;
+	border-radius:5px;
+	border:3px solid black; 
 }
 

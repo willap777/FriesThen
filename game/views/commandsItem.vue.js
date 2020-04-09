@@ -27,7 +27,8 @@ export default {
 		<div v-if="defense().name == 'potato_field'" v-on:click="defense().harvest()">
 	        {{ text.harvest }}
 		</div>
-		<div v-if="defense().name == 'patator' && defense().currentUpgrade <  2" v-on:click="defense().upgrade()">
+		<div v-if="defense().name == 'patator' || defense().name == 'sniper' && defense().currentUpgrade <  2"
+		v-on:click="defense().upgrade()">
 		{{ text.upgrade }}<br>{{ defense().upgradeCosts[defense().currentUpgrade]}} $
 		</div>
 	</div>
