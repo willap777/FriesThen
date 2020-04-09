@@ -12,21 +12,24 @@ export default {
             <div id="start-screen" class="text-center">
                   <div>
                     <b>{{ text.createdBy }}</b><br />
-		    Skarn
+        Skarn
                   </div>
+                  <br />
                   <div>
-                  <b>{{ text.helpers }}</b><br />
+                  <b>{{ text.devs }}</b><br />
                   </div>
-        Willap777<br />
-        Xavier_Begin (À modifier)
+        William Lapierre<br />
+        Xavier Bégin (À modifier)
+        <br /><br />
                   <div>
                     <b>{{ text.graphics }}</b><br />
-		    Willap777
+		    William Lapierre
                   </div>
+                  <br />
                   <div>
 		    <b>{{ text.thanks }}</b> <br />
 		    Discord  Anime-Ultime
-                  </div>
+                  </div><br />
 		  <btn-return-home class="mt-5 mt-sm-2"></btn-return-home>
             </div>
           </div>`
