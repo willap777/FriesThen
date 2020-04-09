@@ -41,18 +41,27 @@ export default{
 		rangeStyle:function(){
 			let u = this.hasItem().currentUpgrade;
 			let name=this.hasItem().name;
-			let sizeinc=300,offsetinc=-100;
-			if(name == 'patator')
-			{
-				sizeinc+=100*u;
-				offsetinc-=50*u;
+			let baseSizeInc=0, upgradeBonus=100;
+			switch(name){
+				case 'patator': baseSizeInc=300;break;
+				case 'sniper': baseSizeInc=500;
 			}
+			let sizeInc = baseSizeInc+upgradeBonus*u;
+			let offsetInc = -(sizeInc - 100)/2;
 			return {
 				background:`rgba(${u*80}, ${255-u*80}, 128, 0.5)`,
-				width: sizeinc+'%',
-				height: sizeinc+'%',
-				top: offsetinc +'%',
-				left: offsetinc +'%'
+				width: sizeInc+'%',
+				height: sizeInc+'%',
+				top: offsetInc +'%',
+				left: offsetInc +'%'
+			}
+		},
+		firingBarWidth:function(){
+			if(this.hasItem().name=='patator')
+				return this.hasItem().passedTick/90*100+'%';
+			else{
+				if(this.hasItem.name=='sniper')
+					return this.hasItem().passedTick/150*100+'%';
 			}
 		}
     },
@@ -82,7 +91,7 @@ export default{
 	v-bind:style="rangeStyle()"	
 	v-if="hasItem() && !isPath && isSelected" >&nbsp;</div>
         <div class="bg-secondary" v-if="hasItem() && !isPath" style="width:50%;margin:auto;">
-	    <div class="firingBar" v-bind:style="{width:hasItem().passedTick/90*100+'%'}">
+	    <div class="firingBar" v-bind:style="{width:firingBarWidth()}">
        	    </div>
 	</div>
     	<span id="fry-count" v-else-if="isLast">{{ game.frites }}F</span>
