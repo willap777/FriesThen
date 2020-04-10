@@ -12,7 +12,7 @@ export default {
             <div id="start-screen" class="text-center">
                   <div>
                     <b>{{ text.createdBy }}</b><br />
-		    Skarn
+		    Patrick G. Leblanc
                   </div>
                   <div>
                   <b>{{ text.helpers }}</b><br />
