@@ -63,6 +63,22 @@ export default{
 				if(this.hasItem().name=='sniper')
 					return this.hasItem().passedTick/150*100+'%';
 			}
+		},
+
+		defenseStyle:function(){
+			let backgroundUrl = "";
+			if(this.hasItem().name=='patator'){
+				switch(this.hasItem().currentUpgrade){
+					case 0: backgroundUrl = 'img/patator.png';break;
+					case 1: backgroundUrl = 'img/patator-v2.png';break;
+					case 2: backgroundUrl = 'img/patator-v3.png';
+				}
+			}
+
+			return {
+				"background-image": 'url('+backgroundUrl+')',
+				transform:'rotate('+this.hasItem().rot+'deg)'
+			}
 		}
     },
     mounted:function(){
@@ -80,7 +96,7 @@ export default{
     },
     template:`
     <div class="p-0" v-bind:id="id" v-bind:ref="id"  v-on:click.stop="iGame.selected(x, y)" v-bind:class="{'pathTile' : isPath && !isSelected, 'bg-secondary' : isSelected, 'firstPathTile' : isFirst && !isSelected && !hasItem(), 'lastPathTile' : isLast && !isSelected, 'defense': hasItem()}">
-        <div class="row col m-auto p-0" v-if="hasItem()" v-bind:class="hasItem().name" v-bind:style="{transform:'rotate('+hasItem().rot+'deg)'}">
+        <div class="row col m-auto p-0" v-if="hasItem()" v-bind:class="hasItem().name" v-bind:style="defenseStyle()">
 	<div v-if="hasItem().name == 'potato_field'">
 	{{ hasItem().count }}
 	</div>
