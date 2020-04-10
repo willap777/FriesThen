@@ -13,7 +13,8 @@ export default  {
 	loseLife: function(){
 		  this.game.frites--;
 		  if(this.game.frites <= 0){
-		  		      game.state.screen = 'game-over';
+				Wave.start(Game.state);
+				Game.state.screen='game-over';
 		  }
 
 	}

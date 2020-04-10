@@ -18,7 +18,7 @@ export default  {
 		{{ text.broken_glass }}
 		10$
 		</div>
-		<div v-for="n in 6" class="col-3 col-sm-6">
+		<div class="col-3 col-sm-6">
 			
 		</div>
 		<div class="col-3 col-sm-6">
