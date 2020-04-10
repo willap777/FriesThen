@@ -1,5 +1,5 @@
 import {Game} from '../lib/game.js';
-
+import {Wave} from '../lib/wave.js';
 import commandLifeTile from './commandLifeTile.vue.js';
 
 export default  {
