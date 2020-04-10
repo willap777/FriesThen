@@ -11,9 +11,7 @@ export default {
     methods:{
       loadMap:function(map_ind){
           $.getJSON( './game/maps/maps.json', function( json ) {
-            
-            alert(map_ind+" "+Game.state.currentMap);
-          
+                      
               if(!map_ind)
               {
                 let mapCount=Game.state.mapCount; //librairie 'fs' ou php pour le déterminer
