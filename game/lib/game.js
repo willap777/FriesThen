@@ -1,5 +1,5 @@
 import {Wave} from './wave.js';
-import Opponent from './opponent.js';
+import Opponent from '../opponents/opponent.js';
 
 import defenseBrokenGlass from '../defenses/broken_glass.js';
 import defensePatator from '../defenses/patator.js';

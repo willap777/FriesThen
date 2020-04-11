@@ -80,6 +80,7 @@
 
 .opponent{
 	position:absolute;
+	background:transparent;
 }
 
 .super.opponent{

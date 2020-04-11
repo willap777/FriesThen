@@ -1,5 +1,5 @@
-import Opponent from './opponent.js';
-import SuperOpponent from './superOpponent.js';
+import Opponent from '../opponents/opponent.js';
+import SuperOpponent from '../opponents/superOpponent.js';
 
 export default class {
     constructor(state, waveNb){
