@@ -36,9 +36,9 @@ export default class {
 			state.waving = false;
 		      }
 		      if(self.waveNb == 10){
-			  state.opponents.push(new SuperOpponent(self.waveNb));
+			  state.opponents.push(new SuperOpponent(self.waveNb,2));
 		      } else {
-			  state.opponents.push(new Opponent(self.waveNb));
+			  state.opponents.push(new Opponent(self.waveNb,2));
 		      }
 		  }
 		  $.each(state.opponents, function(i,o){

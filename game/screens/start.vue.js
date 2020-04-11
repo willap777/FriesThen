@@ -47,4 +47,4 @@ export default {
                   <div class="mt-2 mt-md-5"><button v-on:click="game.screen = 'credit'" class="btn btn-secondary btn-lg">{{ text.credits }}</button></div>
             </div>
           </div>`
-  }//rendre l'outil de sélection de maps dynamique  
+  } 

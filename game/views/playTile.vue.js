@@ -67,12 +67,16 @@ export default{
 
 		defenseStyle:function(){
 			let backgroundUrl = "";
-			if(this.hasItem().name=='patator'){
+			let defensename=this.hasItem().name;
+			if(defensename=='patator'){
 				switch(this.hasItem().currentUpgrade){
 					case 0: backgroundUrl = 'img/patator.png';break;
 					case 1: backgroundUrl = 'img/patator-v2.png';break;
 					case 2: backgroundUrl = 'img/patator-v3.png';
 				}
+			}
+			else if(defensename == 'sniper'){
+				backgroundUrl='img/sniper.png';
 			}
 
 			return {

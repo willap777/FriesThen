@@ -1,7 +1,7 @@
 import {Game} from '../lib/game.js';
 import {Wave} from '../lib/wave.js';
 
-import Opponent from '../lib/opponent.js';
+import Opponent from '../opponents/opponent.js';
 
 import commandLifeTile from './commandLifeTile.vue.js';
 
