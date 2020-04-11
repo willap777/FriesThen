@@ -26,10 +26,23 @@ export default {
 	<div class="col-3 col-sm-6">
 	     <div v-if="defense().name == 'potato_field'" v-on:click="defense().harvest()">
 	        {{ text.harvest }}
+<<<<<<< HEAD
              </div>
 	</div>
 	<div class="col-3 col-sm-6">
 		
+=======
+		</div>
+		<div v-if="defense().name == 'patator' || defense().name == 'sniper' && defense().currentUpgrade <  2"
+		v-on:click="defense().upgrade()">
+		{{ text.upgrade }}<br>{{ defense().upgradeCosts[defense().currentUpgrade]}} $
+		</div>
+	</div>
+	<div class="col-3 col-sm-6">
+		<div v-if="defense().name == 'potato_field' && defense().currentUpgrade <  2" v-on:click="defense().upgrade()">
+		{{ text.upgrade }}<br>{{ defense().upgradeCosts[defense().currentUpgrade]}} $
+		</div>			
+>>>>>>> upstream/dev
 	</div>
 	<div class="col-3 col-sm-6">
 		

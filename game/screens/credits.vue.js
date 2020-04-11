@@ -12,16 +12,21 @@ export default {
             <div id="start-screen" class="text-center">
                   <div>
                     <b>{{ text.createdBy }}</b><br />
-		    Skarn
+		    Patrick G. Leblanc
                   </div>
                   <div>
-                    <b>{{ text.graphics }}</b><br />
-		    <span v-html="text.looking"> </span>
+                  <b>{{ text.devs }}</b><br />
                   </div>
+        Willap Lapierre<br />
+        Xavier Bégin (À modifier)
+                  <div><br/>
+                    <b>{{ text.graphics }}</b><br />
+		    William Lapierre
+                  </div><br />
                   <div>
 		    <b>{{ text.thanks }}</b> <br />
 		    Discord  Anime-Ultime
-                  </div>
+                  </div><br />
 		  <btn-return-home class="mt-5 mt-sm-2"></btn-return-home>
             </div>
           </div>`

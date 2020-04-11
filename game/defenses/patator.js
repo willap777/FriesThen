@@ -7,6 +7,7 @@ export default class extends Defense{
     }
 
     attack(oppList){
+<<<<<<< HEAD
 		     if(this.passedTick < 90) {
 			 this.passedTick++;
 		     }
@@ -22,3 +23,22 @@ export default class extends Defense{
 		         }
 		  }
 	      }
+=======
+		if(this.passedTick < 90) {
+		this.passedTick++;
+		}
+		
+		var tile = $('#'+this.tile).offset();
+			var opp = oppList.find(opponent => Math.sqrt(Math.pow((opponent.x - tile.left),2) + Math.pow((opponent.y - tile.top),2)) <
+			 $('#'+this.tile).height() * (1.7+(0.5*this.currentUpgrade)));
+		if(!(opp === undefined)){
+			this.rot=Math.atan2(opp.y - tile.top, opp.x - tile.left) * 180 / Math.PI;
+			if((this.passedTick >= 90)){
+			this.passedTick = 0;
+			opp.loseLife(1+this.currentUpgrade);
+			}
+		}
+	}
+
+}
+>>>>>>> upstream/dev

@@ -1,5 +1,5 @@
 {
-    "play" : "Play",
+    "alea" : "Play random map",
     "welcome_title": "Welcome to Fries Then!!!",
     "welcome_desc": "A game where you must protect your frenchfries from a hungry mobs!",
     "return_home": "Back Home",
@@ -9,13 +9,22 @@
     "createdBy": "Game created by :",
     "graphics": "Graphics :",
     "thanks": "Thanks :",
-    "looking": "Nobody yet...",
     "broken_glass":"Broken glass",
     "eat":"Eat",
     "patator":"Potato Launcher",
+    "sniper": "Sniper",
     "sell": "Sell",
     "wave": "Wave",
     "final_fries": "Fries left : ",
     "potato_field": "Potatos Field",
+<<<<<<< HEAD
     "harvest" : "Harvest"
+=======
+    "harvest" : "Harvest",
+    "upgrade" : "Upgrade",    
+    "devs": "Developers:",
+    "play": "Play!",
+    "map": "Map",
+    "selectMap": "Map selection"
+>>>>>>> upstream/dev
 }

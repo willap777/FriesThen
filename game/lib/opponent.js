@@ -67,9 +67,15 @@ constructor(
 	    && t.y >= tile.y && t.y < tile.yy) {
 		t.isOn = i;
 		if(t.beforeCenter
+<<<<<<< HEAD
 		   &&   ((t.y < (tile.y + (tile.h / 2))  && t.comingFrom == 0)
 		       || (t.x > (tile.x + (tile.w / 2)) && t.comingFrom == 1)
 		       || (t.y > (tile.y + (tile.h / 2)) && t.comingFrom == 2)
+=======
+		   &&   ((t.y < (tile.y + (tile.h / 2)-7)  && t.comingFrom == 0)
+		       || (t.x > (tile.x + (tile.w / 2)) && t.comingFrom == 1)
+		       || (t.y > (tile.y + (tile.h / 2)-7) && t.comingFrom == 2)
+>>>>>>> upstream/dev
 		       || (t.x < (tile.x + (tile.w / 2)) && t.comingFrom == 3)
 		      )
 		){

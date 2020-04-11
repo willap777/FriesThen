@@ -22,7 +22,7 @@
 	    <component v-bind:is="game.screen+'-screen'"></component>  
 	</div>
     </div>
-    <div id="version">v. 0.3.0</div>
+    <div id="version">v. 0.4.0</div>
 
     <script src="app.js" type="module"></script>
   </body>
