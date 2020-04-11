@@ -38,7 +38,7 @@ class GameState{
 	  waving: false,
 	  wave : 0,
 	  oppId: 0,
-	  mapCount:2,
+	  mapCount:0,
 	  opponents:[],
 	  defenses:{}	  
       };

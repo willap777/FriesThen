@@ -232,8 +232,8 @@
 .map-container{
 	padding:10px;
 	background:darkgrey;
-	overflow-y: visible;
-	max-height:400px;
+	overflow-y: auto;
+	max-height:210px;
 	border-radius:5px;
 	border:3px solid black; 
 }

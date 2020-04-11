@@ -8,13 +8,18 @@ export default {
 	text : Game.locale.text
       }
     },
+    mounted(){
+      $.getJSON( './game/maps/maps.json', function( json ) {
+        Game.state.mapCount=json.length;
+      })
+    },
     methods:{
       loadMap:function(map_ind){
           $.getJSON( './game/maps/maps.json', function( json ) {
                       
               if(!map_ind)
               {
-                let mapCount=Game.state.mapCount; //librairie 'fs' ou php pour le déterminer
+                let mapCount=Game.state.mapCount; 
                 map_ind = 1 + Math.floor(mapCount*Math.random());
               }  
             Game.state.map = json[map_ind-1];
