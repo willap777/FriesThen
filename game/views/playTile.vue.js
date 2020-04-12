@@ -75,9 +75,11 @@ export default{
 					case 2: backgroundUrl = 'img/patator-v3.png';
 				}
 			}
-			else if(defensename == 'sniper'){
+			else if(defensename == 'sniper')
 				backgroundUrl='img/sniper.png';
-			}
+
+			else if(defensename == 'potato_field')
+				backgroundUrl='img/champ_patate.png';
 
 			return {
 				"background-image": 'url('+backgroundUrl+')',

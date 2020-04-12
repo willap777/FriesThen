@@ -1,5 +1,6 @@
 import Opponent from '../opponents/opponent.js';
-import SuperOpponent from '../opponents/superOpponent.js';
+import Bee from '../opponents/bee.js';
+import Bear from '../opponents/bear.js';
 
 export default class {
     constructor(state, waveNb){
@@ -7,7 +8,9 @@ export default class {
 	this.tickNb = 0;
 	this.oppNb = 10;
 	this.start(state);
-	if(waveNb == 10) {
+	if(waveNb>5 && !(waveNb % 2) && waveNb % 10)
+		this.oppNb = 15;
+	else if(!(waveNb % 10)) {
 	    this.oppNb = 1;
 	}
     }
@@ -31,16 +34,36 @@ export default class {
 	      if(state.paused){
 		  
 	      }else{
-		  if(!(self.tickNb++ % 60) && self.oppNb > 0){
-		      if(--self.oppNb == 0){
-			state.waving = false;
-		      }
-		      if(self.waveNb == 10){
-			  state.opponents.push(new SuperOpponent(self.waveNb,2));
-		      } else {
-			  state.opponents.push(new Opponent(self.waveNb,2));
-		      }
-		  }
+
+			if(state.waving)
+			{
+				if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb % 10)
+				{
+					if(!(self.tickNb++ % 60))
+					{
+						if(!(--self.oppNb)){
+							state.waving = false;
+						}
+						if(!((self.tickNb-1) % 120))						
+							state.opponents.push(new Opponent(self.waveNb,2));
+						else
+							state.opponents.push(new Bee(self.waveNb));
+					}
+				}
+				else if(!(self.tickNb++ % 60)&& self.oppNb>0)
+				{
+					if(!(--self.oppNb)){
+					state.waving = false;
+					}
+					if(!(self.waveNb % 10)){
+					state.opponents.push(new Bear(self.waveNb));
+					} else {
+					state.opponents.push(new Opponent(self.waveNb,2));
+					}
+				}
+			}
+			
+			
 		  $.each(state.opponents, function(i,o){
 		      if(o) o.move();
 		  });
