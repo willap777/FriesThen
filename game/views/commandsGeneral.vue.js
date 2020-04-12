@@ -16,6 +16,7 @@ export default {
     },
     methods:{
 	play : function(){
+		alert(this.game.oppId);
 	  if(this.game.paused){
 	      var g = this.game;
 			

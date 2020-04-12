@@ -1,6 +1,7 @@
 import Opponent from '../opponents/opponent.js';
 import Bee from '../opponents/bee.js';
 import Bear from '../opponents/bear.js';
+import {Game} from './game.js'
 
 export default class {
     constructor(state, waveNb){
@@ -88,6 +89,6 @@ export default class {
 	$.each(state.defenses, function(i,d){
 	    d.waveEnd();
 	});
-
+	Game.state.oppId=0;
     }
 }
