@@ -5,16 +5,18 @@ import {Game} from './game.js'
 
 export default class {
     constructor(state, waveNb){
-	this.waveNb = waveNb;
-	this.tickNb = 0;
-	this.oppNb = 10;
-	this.start(state);
-	if(waveNb>5 && !(waveNb % 2) && waveNb % 10)
-		this.oppNb = 15;
-	else if(!(waveNb % 10)) {
-	    this.oppNb = 1;
+		this.waveNb = waveNb;
+		this.tickNb = 0;
+		this.oppNb = 10;
+		this.start(state);
+		if(waveNb>5 && !(waveNb % 2) && waveNb % 10)
+			this.oppNb = 15;
+		if(!(waveNb % 10))
+			this.oppNb = 1;
+		else
+			this.oppNb += waveNb;
 	}
-    }
+	
     
     tick(state, self){
 	let start = Date.now();
