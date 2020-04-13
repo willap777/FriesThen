@@ -10,7 +10,7 @@ export default class {
 		this.oppNb = 10;
 		this.start(state);
 		if(waveNb>5 && !(waveNb % 2) && waveNb % 10)
-			this.oppNb = 15;
+			this.oppNb = 20;
 		if(!(waveNb % 10))
 			this.oppNb = 1;
 		else
@@ -42,13 +42,13 @@ export default class {
 			{
 				if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb % 10)
 				{
-					if(!(self.tickNb++ % 60))
+					if(!(self.tickNb++ % 45))
 					{
 						if(!(--self.oppNb)){
 							state.waving = false;
 						}
-						if(!((self.tickNb-1) % 120))						
-							state.opponents.push(new Opponent(self.waveNb,2));
+						if(!((self.tickNb-1) % 90))						
+							state.opponents.push(new Opponent(self.waveNb,3));
 						else
 							state.opponents.push(new Bee(self.waveNb));
 					}
@@ -61,7 +61,7 @@ export default class {
 					if(!(self.waveNb % 10)){
 					state.opponents.push(new Bear(self.waveNb));
 					} else {
-					state.opponents.push(new Opponent(self.waveNb,2,0));
+					state.opponents.push(new Opponent(self.waveNb,3));
 					}
 				}
 			}
