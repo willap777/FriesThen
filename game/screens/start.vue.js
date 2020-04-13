@@ -39,12 +39,12 @@ export default {
                     <h3>{{text.selectMap}}</h3>
                     <div class="map-container">
                       <div class="map-option" v-for="indmap in game.mapCount">                    
-                        <h4>
+                        <b>
                           {{ text.map }} #{{ indmap }} &nbsp;
                           <button v-on:click="loadMap(indmap)">
                             {{text.play}}
                           </button>
-                        </h4>
+                        </b>
                       </div>
                     </div>                    
                   </div>

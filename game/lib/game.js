@@ -37,7 +37,6 @@ class GameState{
 	  commandView:'general',
 	  waving: false,
 	  wave : 0,
-	  oppId: 0,
 	  mapCount:0,
 	  opponents:[],
 	  defenses:{}	  

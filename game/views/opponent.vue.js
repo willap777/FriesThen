@@ -1,5 +1,6 @@
 import {Game} from '../lib/game.js';
 import {Wave} from '../lib/wave.js';
+import broken_glass from '../defenses/broken_glass.js';
 
 export default {
     props:['self'],
@@ -11,22 +12,19 @@ export default {
 	}
     },
     computed:{
-	width: function() { return this.game.map.meta[this.game.map.path[0]].w / 2},
-    height: function(){ return this.game.map.meta[this.game.map.path[0]].h / 2}    
+        width: function() { return this.game.map.meta[this.game.map.path[0]].w / 2},
+        height: function(){ return this.game.map.meta[this.game.map.path[0]].h / 2},     
     },
     methods:{
         imageSource: function(){
-            let imgSrc="img/mouse.png";       
-            if(this.wave.waveNb>5 && !(this.wave.waveNb % 2) && this.wave.waveNb % 10)
+            let imgSrc="img/mouse.png";
+            switch(this.self.id)
             {
-                if(this.self.id%2)
-                    imgSrc='img/bee.png';
+                case 1: imgSrc='img/bee.png';break;
+                case 2: imgSrc='img/bear.png';break; 
             }
-            else if(!(this.wave.waveNb%10))
-                imgSrc='img/bear.png';
-                
             return imgSrc;
-        }    
+        }   
     },
     template:`
 	<div class="opponent" style="background:transparent" :style="{top:self.y+'px',left:self.x+'px', zIndex:'1000', width:width+'px', height:height+'px'}" v-on:click="iGame.selected(game.map.path[self.isOn])">

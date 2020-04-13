@@ -8,11 +8,6 @@ import end from './game/screens/end.vue.js';
 
 var vm = new Vue({
     el: '#app',
-    mounted(){
-        $.getJSON( './game/maps/maps.json', function( json ) {
-            Game.state.mapCount=json.length;
-        })
-    },
     components : {
 	startScreen : start,
 	playScreen : play,

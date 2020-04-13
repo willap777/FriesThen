@@ -219,7 +219,7 @@
 	padding:10px;
 	background:darkgrey;
 	overflow-y: auto;
-	max-height:210px;
+	max-height:180px;
 	border-radius:5px;
 	border:3px solid black; 
 }

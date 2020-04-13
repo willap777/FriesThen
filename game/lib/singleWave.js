@@ -61,7 +61,7 @@ export default class {
 					if(!(self.waveNb % 10)){
 					state.opponents.push(new Bear(self.waveNb));
 					} else {
-					state.opponents.push(new Opponent(self.waveNb,2));
+					state.opponents.push(new Opponent(self.waveNb,2,0));
 					}
 				}
 			}
