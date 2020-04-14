@@ -1,5 +1,5 @@
 import {Wave} from './wave.js';
-import Opponent from '../opponents/opponent.js';
+import Opponent from './opponent.js';
 
 import defenseBrokenGlass from '../defenses/broken_glass.js';
 import defensePatator from '../defenses/patator.js';
@@ -37,7 +37,9 @@ class GameState{
 	  commandView:'general',
 	  waving: false,
 	  wave : 0,
-	  mapCount:0,
+	  oppId: 0,
+	  currentMap:0,
+	  mapCount:2,
 	  opponents:[],
 	  defenses:{}	  
       };

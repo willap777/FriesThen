@@ -1,22 +1,16 @@
-import Opponent from '../opponents/opponent.js';
-import Bee from '../opponents/bee.js';
-import Bear from '../opponents/bear.js';
-import {Game} from './game.js'
+import Opponent from './opponent.js';
+import SuperOpponent from './superOpponent.js';
 
 export default class {
     constructor(state, waveNb){
-		this.waveNb = waveNb;
-		this.tickNb = 0;
-		this.oppNb = 10;
-		this.start(state);
-		if(waveNb>5 && !(waveNb % 2) && waveNb % 10)
-			this.oppNb = 20;
-		if(!(waveNb % 10))
-			this.oppNb = 1;
-		else
-			this.oppNb += waveNb;
+	this.waveNb = waveNb;
+	this.tickNb = 0;
+	this.oppNb = 10;
+	this.start(state);
+	if(waveNb == 10) {
+	    this.oppNb = 1;
 	}
-	
+    }
     
     tick(state, self){
 	let start = Date.now();
@@ -37,36 +31,16 @@ export default class {
 	      if(state.paused){
 		  
 	      }else{
-
-			if(state.waving)
-			{
-				if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb % 10)
-				{
-					if(!(self.tickNb++ % 45))
-					{
-						if(!(--self.oppNb)){
-							state.waving = false;
-						}
-						if(!((self.tickNb-1) % 90))						
-							state.opponents.push(new Opponent(self.waveNb,3));
-						else
-							state.opponents.push(new Bee(self.waveNb));
-					}
-				}
-				else if(!(self.tickNb++ % 60)&& self.oppNb>0)
-				{
-					if(!(--self.oppNb)){
-					state.waving = false;
-					}
-					if(!(self.waveNb % 10)){
-					state.opponents.push(new Bear(self.waveNb));
-					} else {
-					state.opponents.push(new Opponent(self.waveNb,3));
-					}
-				}
-			}
-			
-			
+		  if(!(self.tickNb++ % 60) && self.oppNb > 0){
+		      if(--self.oppNb == 0){
+			state.waving = false;
+		      }
+		      if(self.waveNb == 10){
+			  state.opponents.push(new SuperOpponent(self.waveNb));
+		      } else {
+			  state.opponents.push(new Opponent(self.waveNb));
+		      }
+		  }
 		  $.each(state.opponents, function(i,o){
 		      if(o) o.move();
 		  });
@@ -91,6 +65,6 @@ export default class {
 	$.each(state.defenses, function(i,d){
 	    d.waveEnd();
 	});
-	Game.state.oppId=0;
+
     }
 }

@@ -1,6 +1,5 @@
 import {Game} from '../lib/game.js';
 import {Wave} from '../lib/wave.js';
-import broken_glass from '../defenses/broken_glass.js';
 
 export default {
     props:['self'],
@@ -12,25 +11,14 @@ export default {
 	}
     },
     computed:{
-        width: function() { return this.game.map.meta[this.game.map.path[0]].w / 2},
-        height: function(){ return this.game.map.meta[this.game.map.path[0]].h / 2},     
-    },
-    methods:{
-        imageSource: function(){
-            let imgSrc="img/mouse.png";
-            switch(this.self.id)
-            {
-                case 1: imgSrc='img/bee.png';break;
-                case 2: imgSrc='img/bear.png';break; 
-            }
-            return imgSrc;
-        }   
+	width: function() { return this.game.map.meta[this.game.map.path[0]].w / 2},
+	height: function(){ return this.game.map.meta[this.game.map.path[0]].h / 2}
     },
     template:`
-	<div class="opponent" style="background:transparent" :style="{top:self.y+'px',left:self.x+'px', zIndex:'1000', width:width+'px', height:height+'px'}" v-on:click="iGame.selected(game.map.path[self.isOn])">
-        <div class="lifeBar" :style="{width:self.life/self.startingLife*100+'%'}">
+	<div class="opponent" style="background:transparent" v-bind:class="{'super':wave.waveNb == 10}" v-bind:style="{top:self.y+'px',left:self.x+'px', zIndex:'1000', width:width+'px', height:height+'px'}" v-on:click="iGame.selected(game.map.path[self.isOn])">
+        <div class="lifeBar" v-bind:style="{width:self.life/self.startingLife*100+'%'}">
         </div>
-        <img :src="imageSource()" width="100%"/>
+        <img src="img/mouse.png" width="100%"/>
     </div>
     `
 }
