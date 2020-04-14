@@ -15,7 +15,7 @@ export default class{
     sell(){
 	this.count = 0;
 	if(this.count <= 0){
-	    Game.state.cash+=this.price / 2;
+	    Game.state.cash+=Math.round(this.price / 2);
 	    Vue.delete(Game.state.defenses, this.tile);
 	    Game.state.commandView = "selected";
 	}

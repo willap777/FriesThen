@@ -21,7 +21,7 @@ export default {
 	</div>
 	<div class="col-3 col-sm-6"  v-on:click="defense().sell()">
 		{{ text.sell }}
-                {{ defense().price / 2}} $
+                {{ Math.round(defense().price / 2)}} $
 	</div>
 	<div class="col-3 col-sm-6">
 		<div v-if="defense().name == 'potato_field'" v-on:click="defense().harvest()">

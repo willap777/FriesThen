@@ -22,6 +22,7 @@ export default {
             {
                 case 1: imgSrc='img/bee.png';break;
                 case 2: imgSrc='img/bear.png';break; 
+                case 3: imgSrc='img/raccoon.png';break;
             }
             return imgSrc;
         }   
