@@ -178,10 +178,15 @@
 	background-size: 100%;
 }
 
-.col-3.col-sm-6:not(.text-right){
+.col-3.col-sm-6:not(.text-right),.col-3.col-sm-12{
 	display:flex;
 	align-items:center;
 	justify-content: center;
+}
+
+.col-3.col-sm-12{
+	background-color:#333;
+	color:white;
 }
 
 .col-3.col-sm-6{

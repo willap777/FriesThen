@@ -22,5 +22,10 @@
     "devs": "Développeurs:",
     "play": "Jouer!",
     "map": "Niveau",
-    "selectMap": "Choix du niveau"
+    "selectMap": "Choix du niveau",
+    "generalMenu": "Menu général",
+    "itemMenu": "Menu de l'item sélectionné",
+    "lastMenu": "Menu des frites",
+    "pathMenu": "Menu du sentier",
+    "selectedMenu": "Menu de la tuile sélectionnée"
 }
