@@ -1,21 +1,21 @@
-import {Game} from './game.js';
+import {Game} from '../lib/game.js';
 
 export default class {
 
 constructor(
-    startingLife
+    startingLife,speedCoeff,id
 ){
     this.x = Game.state.map.meta[Game.state.map.path[0]].x + Game.state.map.meta[Game.state.map.path[0]].w / 2 ;
     this.y = -Game.state.map.meta[Game.state.map.path[0]].h/2;
-    this.id = Game.state.oppId++;;
+    this.id = id?id:0;
     this.startingLife = startingLife;
     this.life = startingLife;
-    this.speed = 2 * Game.state.map.meta[Game.state.map.path[0]].h / 100;
+    this.speed = speedCoeff * Game.state.map.meta[Game.state.map.path[0]].h / 100;
     this.wasOn = null;
     this.isOn = null;
     this.beforeCenter = true;
     this.heading = 2;
-    this.comingFrom = 2;
+	this.comingFrom = 2;
 }    
     loseLife(hit){
 	this.life-=hit;
@@ -80,7 +80,7 @@ constructor(
 		}
 		
 		if (t.wasOn != t.isOn){
-		    if(!(Game.state.defenses[Game.state.map.path[t.isOn]] === undefined)){
+		    if(!(Game.state.defenses[Game.state.map.path[t.isOn]] === undefined) && this.id!=1){
 			Game.state.defenses[Game.state.map.path[t.isOn]].stepOn(t);
 		    }
 		    t.wasOn = t.isOn;

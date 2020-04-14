@@ -8,13 +8,18 @@ export default {
 	text : Game.locale.text
       }
     },
+    mounted(){
+      $.getJSON( './game/maps/maps.json', function( json ) {
+        Game.state.mapCount=json.length;
+      })
+    },
     methods:{
       loadMap:function(map_ind){
           $.getJSON( './game/maps/maps.json', function( json ) {
                       
               if(!map_ind)
               {
-                let mapCount=Game.state.mapCount; //librairie 'fs' ou php pour le déterminer
+                let mapCount=Game.state.mapCount; 
                 map_ind = 1 + Math.floor(mapCount*Math.random());
               }  
             Game.state.map = json[map_ind-1];
@@ -34,12 +39,12 @@ export default {
                     <h3>{{text.selectMap}}</h3>
                     <div class="map-container">
                       <div class="map-option" v-for="indmap in game.mapCount">                    
-                        <h4>
+                        <b>
                           {{ text.map }} #{{ indmap }} &nbsp;
                           <button v-on:click="loadMap(indmap)">
                             {{text.play}}
                           </button>
-                        </h4>
+                        </b>
                       </div>
                     </div>                    
                   </div>
@@ -47,4 +52,4 @@ export default {
                   <div class="mt-2 mt-md-5"><button v-on:click="game.screen = 'credit'" class="btn btn-secondary btn-lg">{{ text.credits }}</button></div>
             </div>
           </div>`
-  }//rendre l'outil de sélection de maps dynamique  
+  } 

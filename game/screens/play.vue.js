@@ -3,10 +3,7 @@ import {Game} from '../lib/game.js';
 import playView from '../views/playview.vue.js';
 import commandsView from '../views/commandsView.vue.js';
 
-export default
-function(resolve){
-
-    resolve({
+export default{
     data: function (){
       return{
           game : Game.state,
@@ -25,5 +22,4 @@ function(resolve){
       		  <play-view></play-view>
 		  <commands-view></commands-view>
           </div>`
-   });
-}
+  }
