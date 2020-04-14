@@ -1,6 +1,7 @@
 import Opponent from '../opponents/opponent.js';
 import Bee from '../opponents/bee.js';
 import Bear from '../opponents/bear.js';
+import Raccoon from '../opponents/raccoon.js';
 import {Game} from './game.js'
 
 export default class {
@@ -9,7 +10,7 @@ export default class {
 		this.tickNb = 0;
 		this.oppNb = 10;
 		this.start(state);
-		if(waveNb>5 && !(waveNb % 2) && waveNb % 10)
+		if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb != 10 && self.waveNb < 15)
 			this.oppNb = 20;
 		if(!(waveNb % 10))
 			this.oppNb = 1;
@@ -26,7 +27,7 @@ export default class {
 	      state.screen = 'game-over';
 	  }else if(state.waving == false && state.opponents.length <= 0){
 	      //waveover
-	      if(self.waveNb > 9){
+	      if(self.waveNb > 19){
 		  state.screen = 'game-over';
 	      } else {
 		  state.paused = true;
@@ -40,7 +41,7 @@ export default class {
 
 			if(state.waving)
 			{
-				if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb % 10)
+				if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb != 10 && self.waveNb <15)
 				{
 					if(!(self.tickNb++ % 45))
 					{
@@ -53,17 +54,44 @@ export default class {
 							state.opponents.push(new Bee(self.waveNb));
 					}
 				}
-				else if(!(self.tickNb++ % 60)&& self.oppNb>0)
-				{
-					if(!(--self.oppNb)){
-					state.waving = false;
-					}
-					if(!(self.waveNb % 10)){
-					state.opponents.push(new Bear(self.waveNb));
-					} else {
-					state.opponents.push(new Opponent(self.waveNb,3));
+				else if(self.waveNb<10){
+					if(!(self.tickNb++ % 60)&& self.oppNb>0)
+					{
+						if(!(--self.oppNb)){
+						state.waving = false;
+						}
+						state.opponents.push(new Opponent(self.waveNb,3));						
 					}
 				}
+				else if(self.waveNb>15 && self.waveNb<20 && !(self.waveNb%2)){
+					if(!(self.tickNb++ % 120))
+					{
+						if(!(--self.oppNb)){
+							state.waving = false;
+						}
+						if(!((self.tickNb-1) % 240))						
+							state.opponents.push(new Raccoon(self.waveNb));
+						else
+							state.opponents.push(new Bee(self.waveNb));
+					}
+				}
+				else if(self.waveNb>10 && self.waveNb<20){
+					if(!(self.tickNb++ % 120))
+					{
+						if(!(--self.oppNb)){
+							state.waving = false;
+						}
+						if(!((self.tickNb-1) % 240))						
+							state.opponents.push(new Raccoon(self.waveNb));
+						else
+							state.opponents.push(new Opponent(self.waveNb,3));
+					}
+				}
+				else if(!(self.tickNb++))
+				{
+					state.opponents.push(new Bear(self.waveNb));
+					state.waving = false;
+				}			
 			}
 			
 			

@@ -18,7 +18,7 @@ export default {
                   <b>{{ text.devs }}</b><br />
                   </div>
         Willap Lapierre<br />
-        Xavier Bégin (À modifier)
+        Xavier Bégin
                   <div><br/>
                     <b>{{ text.graphics }}</b><br />
 		    William Lapierre
