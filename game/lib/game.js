@@ -32,7 +32,7 @@ class GameState{
 	  intervalHandle : null,      
 	  screen : 'start',
 	  frites : 10,
-	  cash   : 100,
+	  cash   : 250,
 	  selectedTile:'0',
 	  commandView:'general',
 	  waving: false,

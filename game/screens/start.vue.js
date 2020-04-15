@@ -23,7 +23,7 @@ export default {
                 map_ind = 1 + Math.floor(mapCount*Math.random());
               }  
             Game.state.map = json[map_ind-1];
-            Game.state.screen='play';
+            Game.state.screen='difficulty';
         })
       }
     } ,

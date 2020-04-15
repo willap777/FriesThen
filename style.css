@@ -124,6 +124,44 @@
 	border:2px solid #651a1a;
 }
 
+#oil_rain{
+	background:url('img/oil_rain.png');
+	z-index:1001;
+	position:absolute;
+	background-size:100%;
+	width:81vmin;
+	height:calc(108vmin - 8px);
+	pointer-events: none;
+}
+
+#map-selection{
+	color:white;
+	margin:20px;
+	padding:20px;
+	background:	#c23;
+	display:inline-block;
+	border:3px inset lightslategray; 
+	border-radius:5px;
+}
+
+.map-option{
+	color:black;
+	margin:10px;
+	padding:10px 20px;
+	background:white;
+	border:1px solid black;
+	border-radius:5px;
+}
+
+.map-container{
+	padding:10px;
+	background:darkgrey;
+	overflow-y: auto;
+	max-height:180px;
+	border-radius:5px;
+	border:3px solid black; 
+}
+
 /*small...*/
 @media (min-width: 576px){
 #commands-box, #play-box{
@@ -155,6 +193,16 @@
 #play-box > div{
 	height:calc(10vmin - 1px);
 	width:60vmin;
+}
+
+#oil_rain{
+	background:url('img/oil_rain.png');
+	z-index:1001;
+	position:absolute;
+	background-size:100%;
+	width:60vmin;
+	height:calc(80vmin - 8px);
+	pointer-events: none;
 }
 
 
@@ -201,41 +249,6 @@
 	font-weight:bold;
 }
 
-#map-selection{
-	color:white;
-	margin:20px;
-	padding:20px;
-	background:	#c23;
-	display:inline-block;
-	border:3px inset lightslategray; 
-	border-radius:5px;
-}
 
-.map-option{
-	color:black;
-	margin:10px;
-	padding:10px 20px;
-	background:white;
-	border:1px solid black;
-	border-radius:5px;
-}
 
-.map-container{
-	padding:10px;
-	background:darkgrey;
-	overflow-y: auto;
-	max-height:180px;
-	border-radius:5px;
-	border:3px solid black; 
-}
-
-#oil_rain{
-	background:url('img/oil_rain.png');
-	z-index:1001;
-	position:absolute;
-	background-size:100%;
-	width:300px;
-	height:400px;
-	pointer-events: none;
-}
 
