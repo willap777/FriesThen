@@ -14,8 +14,9 @@ export default class {
 			this.oppNb = 20;
 		if(!(waveNb % 10))
 			this.oppNb = 1;
-		else
+		else if(this.waveNb<10)
 			this.oppNb += waveNb;
+		else this.oppNb += waveNb-10;
 	}
 	
     
