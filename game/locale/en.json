@@ -27,5 +27,6 @@
     "itemMenu": "Item menu",
     "lastMenu": "Fries menu",
     "pathMenu": "Path menu",
-    "selectedMenu": "Selected tile menu"
+    "selectedMenu": "Selected tile menu",
+    "oil_rain": "Oil rain"
 }

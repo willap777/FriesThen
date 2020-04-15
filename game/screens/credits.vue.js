@@ -13,11 +13,11 @@ export default {
                   <div>
                     <b>{{ text.createdBy }}</b><br />
 		    Patrick G. Leblanc
-                  </div>
+                  </div><br/>
                   <div>
                   <b>{{ text.devs }}</b><br />
                   </div>
-        Willap Lapierre<br />
+        William Lapierre<br />
         Xavier Bégin
                   <div><br/>
                     <b>{{ text.graphics }}</b><br />

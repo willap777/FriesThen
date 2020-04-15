@@ -36,6 +36,7 @@ class GameState{
 	  selectedTile:'0',
 	  commandView:'general',
 	  waving: false,
+	  rainTime:0,
 	  wave : 0,
 	  mapCount:0,
 	  opponents:[],
@@ -76,7 +77,13 @@ class GameState{
 	  }
     }
     
-      buy(item){
+	buy(item){
+
+		if(this.state.cash > 249 && item == "oil_rain"){
+			this.state.rainTime=1000;
+			this.state.cash -= 250;
+		}
+
 		if(this.state.defenses[this.state.selectedTile] === undefined) {
 			if(this.state.cash >= 10 && item == 'broken_glass'){
 			this.state.cash -= 10;
@@ -95,7 +102,7 @@ class GameState{
 				Vue.set(this.state.defenses, this.state.selectedTile, new defenseSniper());
 			}
 		}
-      }
+	}
 
     getState(){return this.state;}
   }

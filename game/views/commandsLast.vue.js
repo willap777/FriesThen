@@ -21,14 +21,14 @@ export default  {
 		}
 	},
     methods:{
-	loseLife: function(){
-		  this.game.frites--;
-		  if(this.game.frites <= 0){
-				Wave.start(Game.state);
-				Game.state.screen='game-over';
-		  }
+		loseLife: function(){
+			this.game.frites--;
+			if(this.game.frites <= 0){
+					Wave.start(Game.state);
+					Game.state.screen='game-over';
+			}
 
-	}
+		}
     },
     components:{
 	lifeTile: commandLifeTile

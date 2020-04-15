@@ -27,5 +27,6 @@
     "itemMenu": "Menu de l'item sélectionné",
     "lastMenu": "Menu des frites",
     "pathMenu": "Menu du sentier",
-    "selectedMenu": "Menu de la tuile sélectionnée"
+    "selectedMenu": "Menu de la tuile sélectionnée",
+    "oil_rain": "Pluie d'huile"
 }

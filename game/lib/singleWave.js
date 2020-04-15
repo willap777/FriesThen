@@ -39,6 +39,17 @@ export default class {
 		  
 	      }else{
 
+			if(Game.state.rainTime>0)
+			{
+				if(!(Game.state.rainTime % 100)){
+					$.each(state.opponents, function(i,o){
+						o.loseLife(1);
+					})
+				}				
+				Game.state.rainTime--;
+			}
+			
+
 			if(state.waving)
 			{
 				if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb != 10 && self.waveNb <15)
