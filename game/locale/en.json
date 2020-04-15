@@ -1,11 +1,11 @@
 {
-    "alea" : "Play random map",
+    "alea" : "Select a random map",
     "welcome_title": "Welcome to Fries Then!!!",
-    "welcome_desc": "A game where you must protect your frenchfries from a hungry mobs!",
+    "welcome_desc": "A game where you must protect your french fries from hungry invaders!",
     "return_home": "Back Home",
     "credits": "Credits",
     "win": "You won!!!",
-    "lose": "There is no more french fries :( you lose...",
+    "lose": "There is no more french fries :( you have lost...",
     "createdBy": "Game created by :",
     "graphics": "Graphics :",
     "thanks": "Thanks :",
@@ -20,7 +20,7 @@
     "harvest" : "Harvest",
     "upgrade" : "Upgrade",    
     "devs": "Developers:",
-    "play": "Play!",
+    "select": "Select",
     "map": "Map",
     "selectMap": "Map selection",
     "generalMenu": "General menu",
@@ -28,5 +28,8 @@
     "lastMenu": "Fries menu",
     "pathMenu": "Path menu",
     "selectedMenu": "Selected tile menu",
-    "oil_rain": "Oil rain"
+    "oil_rain": "Oil rain",
+    "go": "Play!",
+    "returnSelection": "Return to map selection",
+    "selection": "You have selected map # "
 }

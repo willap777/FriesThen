@@ -5,23 +5,36 @@ export default {
     data: function (){
       return{
         game : Game.state,
-	text : Game.locale.text
+        text : Game.locale.text
       }
     },
-
+    methods:{
+      commencerPartie:function(){
+        this.game.screen="play";
+      },
+      retourSelection:function(){
+        this.game.map=[];
+        this.game.screen="start";
+      }
+    },
     template : `
           <div class="d-flex justify-content-center align-items-center">
             <btn-select-lang class="text-right fixed-top mt-4 mr-3 mr-md-5"></btn-select-lang>
-            <div id="start-screen" class="text-center">
+            <div id="start-screen" class="text-center d-flex-col justify-content-center align-items-center">
                   <div>
-                    <h1>{{ text.welcome_title }}</h1>
-                    <span>{{ text.welcome_desc }} </span>
+                    <h3>{{ text.selection+game.currentMap }}</h3>
+                  </div><br /><br />
+                  
+                  <div class="mt-2 mt-md-5">
+                    <button v-on:click="commencerPartie()" class="btn btn-success btn-lg">
+                      {{ text.go }}
+                    </button>
                   </div>
-                  <div class="btn-danger">Difficile<div>
-                  <div class="btn-danger">Medium<div>
-                  <div class="btn-danger">Easy<div>
-                  <div class="btn-info" v-on:click="commencerPartie()">GO!</div>
-                  <div class="btn-info" v-on:click="retourSelection()">Retour à la sélection de la carte</div>
+                  <div class="mt-2 mt-md-5">
+                    <button v-on:click="retourSelection()" class="btn btn-secondary btn-lg">
+                      {{ text.returnSelection }}
+                    </button>
+                  </div>
             </div>
           </div>`
   } 

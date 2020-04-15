@@ -32,13 +32,14 @@ class GameState{
 	  intervalHandle : null,      
 	  screen : 'start',
 	  frites : 10,
-	  cash   : 250,
+	  cash   : 100,
 	  selectedTile:'0',
 	  commandView:'general',
 	  waving: false,
 	  rainTime:0,
 	  wave : 0,
 	  mapCount:0,
+	  currentMap:0,
 	  opponents:[],
 	  defenses:{}	  
       };
