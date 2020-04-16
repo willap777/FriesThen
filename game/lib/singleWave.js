@@ -10,8 +10,8 @@ export default class {
 		this.tickNb = 0;
 		this.oppNb = 10;
 		this.start(state);
-		if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb != 10 && self.waveNb < 15)
-			this.oppNb = 20;
+		if(waveNb>5 && !(waveNb % 2) && waveNb != 10 && waveNb < 15)
+			this.oppNb = 16;
 		if(!(waveNb % 10))
 			this.oppNb = 1;
 		else if(this.waveNb<10)
@@ -55,19 +55,20 @@ export default class {
 			{
 				if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb != 10 && self.waveNb <15)
 				{
-					if(!(self.tickNb++ % 45))
+					let spawnInterval=Math.ceil(45-self.waveNb/2);
+					if(!(self.tickNb++ % (spawnInterval)))
 					{
 						if(!(--self.oppNb)){
 							state.waving = false;
 						}
-						if(!((self.tickNb-1) % 90))						
+						if(!((self.tickNb-1) % (spawnInterval*2)))						
 							state.opponents.push(new Opponent(self.waveNb,3));
 						else
 							state.opponents.push(new Bee(self.waveNb));
 					}
 				}
 				else if(self.waveNb<10){
-					if(!(self.tickNb++ % 60)&& self.oppNb>0)
+					if(!(self.tickNb++ % (60-self.waveNb))&& self.oppNb>0)
 					{
 						if(!(--self.oppNb)){
 						state.waving = false;
@@ -76,12 +77,12 @@ export default class {
 					}
 				}
 				else if(self.waveNb>15 && self.waveNb<20 && !(self.waveNb%2)){
-					if(!(self.tickNb++ % 120))
+					if(!(self.tickNb++ % 90))
 					{
 						if(!(--self.oppNb)){
 							state.waving = false;
 						}
-						if(!((self.tickNb-1) % 240))						
+						if(!((self.tickNb-1) % 180))						
 							state.opponents.push(new Raccoon(self.waveNb));
 						else
 							state.opponents.push(new Bee(self.waveNb));
