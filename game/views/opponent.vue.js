@@ -18,7 +18,7 @@ export default {
     methods:{
         imageSource: function(){
             let imgSrc="img/mouse.png";
-            switch(this.self.id)
+            switch(this.self.animalId)
             {
                 case 1: imgSrc='img/bee.png';break;
                 case 2: imgSrc='img/bear.png';break; 

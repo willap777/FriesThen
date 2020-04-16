@@ -17,13 +17,15 @@ export default {
       loadMap:function(map_ind){
           $.getJSON( './game/maps/maps.json', function( json ) {
                       
-              if(!map_ind)
-              {
-                let mapCount=Game.state.mapCount; 
-                map_ind = 1 + Math.floor(mapCount*Math.random());
-              }  
+            if(!map_ind)
+            {
+              let mapCount=Game.state.mapCount; 
+              map_ind = 1 + Math.floor(mapCount*Math.random());
+            } 
+            
+            Game.state.currentMap=map_ind;
             Game.state.map = json[map_ind-1];
-            Game.state.screen='play';
+            Game.state.screen='difficulty';
         })
       }
     } ,
@@ -42,7 +44,7 @@ export default {
                         <b>
                           {{ text.map }} #{{ indmap }} &nbsp;
                           <button v-on:click="loadMap(indmap)">
-                            {{text.play}}
+                            {{text.select}}
                           </button>
                         </b>
                       </div>

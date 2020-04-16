@@ -51,7 +51,7 @@ export default  {
 			150$
 		</div>
 
-		<div class="col-3 col-sm-6" v-if="getScreenWidth<1000">
+		<div class="col-3 col-sm-6" v-if="getScreenWidth<700">
 				
 		</div>
 

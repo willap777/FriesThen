@@ -29,7 +29,8 @@ class GameState{
     constructor(){    
       this.state = {
 	  paused: true,
-	  intervalHandle : null,      
+	  intervalHandle : null, 
+	  oppId:0,     
 	  screen : 'start',
 	  frites : 10,
 	  cash   : 100,
@@ -39,6 +40,7 @@ class GameState{
 	  rainTime:0,
 	  wave : 0,
 	  mapCount:0,
+	  currentMap:0,
 	  opponents:[],
 	  defenses:{}	  
       };

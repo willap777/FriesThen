@@ -59,7 +59,7 @@ export default  {
 		<div class="col-3 col-sm-6">
 			
 		</div>
-		<div class="col-3 col-sm-6" v-if="getScreenWidth<1000">
+		<div class="col-3 col-sm-6" v-if="getScreenWidth<700">
 				
 		</div>
 		<life-tile></life-tile>

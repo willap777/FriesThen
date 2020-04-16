@@ -1,5 +1,5 @@
 {
-    "alea" : "Jouer à un niveau aléatoire!",    
+    "alea" : "Sélectionnez un niveau aléatoire!",    
     "welcome_title": "Bienvenue sur Frites Alors!!!",
     "welcome_desc": "Le jeu où il faut protéger son lot de frites des envahisseurs affamés!",
     "return_home": "Retour au début",
@@ -20,7 +20,7 @@
     "harvest" : "Récolter",
     "upgrade": "Améliorer", 
     "devs": "Développeurs:",
-    "play": "Jouer!",
+    "select": "Sélectionner",
     "map": "Niveau",
     "selectMap": "Choix du niveau",
     "generalMenu": "Menu général",
@@ -28,5 +28,8 @@
     "lastMenu": "Menu des frites",
     "pathMenu": "Menu du sentier",
     "selectedMenu": "Menu de la tuile sélectionnée",
-    "oil_rain": "Pluie d'huile"
+    "oil_rain": "Pluie d'huile",
+    "go": "Commencer la partie!",
+    "returnSelection": "Retour à la sélection du niveau",
+    "selection": "Vous avez sélectionné le niveau # "
 }
