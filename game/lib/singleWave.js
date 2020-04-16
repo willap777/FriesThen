@@ -56,7 +56,7 @@ export default class {
 				if(self.waveNb>5 && !(self.waveNb % 2) && self.waveNb != 10 && self.waveNb <15)
 				{
 					let spawnInterval=Math.ceil(45-self.waveNb/2);
-					if(!(self.tickNb++ % (spawnInterval)))
+					if(!(self.tickNb++ % spawnInterval))
 					{
 						if(!(--self.oppNb)){
 							state.waving = false;
