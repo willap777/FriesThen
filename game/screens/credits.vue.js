@@ -17,6 +17,7 @@ export default {
                   <div>
                   <b>{{ text.devs }}</b><br />
                   </div>
+	Patrick G. Leblanc<br />
         William Lapierre<br />
         Xavier Bégin
                   <div><br/>
@@ -25,7 +26,7 @@ export default {
                   </div><br />
                   <div>
 		    <b>{{ text.thanks }}</b> <br />
-		    Discord  Anime-Ultime
+		    Discord Anime-Ultime
                   </div><br />
 		  <btn-return-home class="mt-5 mt-sm-2"></btn-return-home>
             </div>
