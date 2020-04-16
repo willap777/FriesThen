@@ -178,10 +178,15 @@
 	background-size: 100%;
 }
 
-.col-3.col-sm-6:not(.text-right){
+.col-3.col-sm-6:not(.text-right),.col-3.col-sm-12{
 	display:flex;
 	align-items:center;
 	justify-content: center;
+}
+
+.col-3.col-sm-12{
+	background-color:#333;
+	color:white;
 }
 
 .col-3.col-sm-6{
@@ -222,5 +227,15 @@
 	max-height:180px;
 	border-radius:5px;
 	border:3px solid black; 
+}
+
+#oil_rain{
+	background:url('img/oil_rain.png');
+	z-index:1001;
+	position:absolute;
+	background-size:100%;
+	width:300px;
+	height:400px;
+	pointer-events: none;
 }
 

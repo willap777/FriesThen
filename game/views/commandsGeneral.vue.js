@@ -13,7 +13,17 @@ export default {
             game : Game.state,
 	    text: Game.locale.text
       }
-    },
+	},
+	computed:{
+		getScreenWidth:function(){
+			return window.screen.width;
+		},
+		headerFontSize:function(){
+			return {
+				fontSize:this.getScreenWidth<1000?'10px':'30px'
+			}
+		}
+	},
     methods:{
 	play : function(){
 	  if(this.game.paused){
@@ -29,8 +39,8 @@ export default {
     },
     template: `
 	<div>
-		<div class="col-3 col-sm-6">
-			
+		<div class="col-3 col-sm-12" :style="headerFontSize">
+			<b>{{text.generalMenu}}</b>
 		</div>
 		<div class="col-3 col-sm-6">
 			
@@ -48,7 +58,7 @@ export default {
 		<div class="col-3 col-sm-6">
 			
 		</div>
-		<div class="col-3 col-sm-6">
+		<div class="col-3 col-sm-6" v-if="getScreenWidth<1000">
 				
 		</div>
 		<life-tile></life-tile>

@@ -13,11 +13,12 @@ export default {
                   <div>
                     <b>{{ text.createdBy }}</b><br />
 		    Patrick G. Leblanc
-                  </div>
+                  </div><br/>
                   <div>
                   <b>{{ text.devs }}</b><br />
                   </div>
-        Willap Lapierre<br />
+	Patrick G. Leblanc<br />
+        William Lapierre<br />
         Xavier Bégin
                   <div><br/>
                     <b>{{ text.graphics }}</b><br />
@@ -25,7 +26,7 @@ export default {
                   </div><br />
                   <div>
 		    <b>{{ text.thanks }}</b> <br />
-		    Discord  Anime-Ultime
+		    Discord Anime-Ultime
                   </div><br />
 		  <btn-return-home class="mt-5 mt-sm-2"></btn-return-home>
             </div>
