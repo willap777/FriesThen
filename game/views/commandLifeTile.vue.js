@@ -26,7 +26,7 @@ export default {
 			else
 				cls +=  "col-3 h-50";
 
-			cls += ' text-right bg-light rounded border border primary';
+			cls += ' text-right';
 			return cls;
 		}		
 	},

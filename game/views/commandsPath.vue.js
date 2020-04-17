@@ -1,23 +1,16 @@
 import {Game} from '../lib/game.js';
 
 import commandLifeTile from './commandLifeTile.vue.js';
+import onresizeClass from '../mixins/onresizeClass.js';
 
 export default  {
+	mixins:[onresizeClass],
     data: function (){
       return{
 		iGame : Game,
 		game:Game.state,
-		text : Game.locale.text,
-		isHorizontal:window.screen.width/window.screen.height>1,
-		commandClass:this.getCommandClass(window.screen.width/window.screen.height>1),
-		commandsHeaderClass:this.getCommandsHeaderClass(window.screen.width/window.screen.height>1)
+		text : Game.locale.text
       }
-	},
-	created(){
-		window.addEventListener("resize", this.handleChange);
-	},
-	destroyed(){
-		window.removeEventListener("resize", this.handleChange);
 	},
 	methods:{
 		rainCooldownStyle:function(){
@@ -30,32 +23,6 @@ export default  {
 				height:barHeight+'%',
 				width:'100%'
 			}
-		},
-		handleChange(){
-			let isHorizontal=window.screen.width/window.screen.height>1;
-			this.isHorizontal=isHorizontal;
-			this.commandClass=this.getCommandClass(isHorizontal);
-			this.commandsHeaderClass=this.getCommandsHeaderClass(isHorizontal);
-		},
-		getCommandClass:function(isHorizontal){
-			let cls=""
-			if(isHorizontal)
-				cls += "col-6 h-25";
-			else
-				cls +=  "col-3 h-50";
-				
-			cls += ' d-flex justify-content-center align-items-center bg-light rounded border border primary';
-			return cls;
-		},
-		getCommandsHeaderClass:function(isHorizontal){
-			let cls=""
-			if(isHorizontal)
-				cls += "col-12 h-25";
-			else
-				cls +=  "col-3 h-50";
-				
-			cls += ' d-flex justify-content-center align-items-center bg-dark text-white';
-			return cls;
 		}
 	},
 	
