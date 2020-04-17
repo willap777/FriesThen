@@ -136,8 +136,8 @@
 
 #map-selection{
 	color:white;
-	margin:20px;
-	padding:20px;
+	margin:2vh;
+	padding:2vh;
 	background:	#c23;
 	display:inline-block;
 	border:3px inset lightslategray; 
@@ -146,15 +146,15 @@
 
 .map-option{
 	color:black;
-	margin:10px;
-	padding:10px 20px;
+	margin:1vh;
+	padding:1vh 2vh;
 	background:white;
 	border:1px solid black;
 	border-radius:5px;
 }
 
 .map-container{
-	padding:10px;
+	padding:1vh;
 	background:darkgrey;
 	overflow-y: auto;
 	max-height:180px;
@@ -162,32 +162,31 @@
 	border:3px solid black; 
 }
 
+#fry-count{
+	font-weight:bold;
+	color:white;
+	text-shadow:1px 1px black, 0px 1px black, -1px 1px black,
+	1px -1px black, 0px -1px black, -1px -1px black,
+	1px 0px black, -1px 0px black;    	 
+}
+
+.p-0.col-2:not(.pathTile):not(.patator):not(.bg-secondary):not(.broken_glass):not(.potato_field):not(.sniper){
+	background-image: url('img/grass.png');
+	background-size: 100%;
+}
+
+.potato_field > div{
+	color:white;
+	font-weight:bold;
+}
+
 /*small...*/
 @media (min-width: 576px){
-#commands-box, #play-box{
-	height:100%;
-}
-
-#play-box{
-	height:100%;
-}
-
 
 #commands-box{
 	border-top :none;
 	border-left:double 3px black;
 	font-size:initial;
-}
-
-
-#commands-box > div
-{
-	height:50%;
-}
-
-#commands-box div div
-{
-	height:50%;
 }
 
 #play-box > div{
@@ -213,41 +212,7 @@
 
 }
 
-#fry-count{
-	font-weight:bold;
-	color:white;
-	text-shadow:1px 1px black, 0px 1px black, -1px 1px black,
-	1px -1px black, 0px -1px black, -1px -1px black,
-	1px 0px black, -1px 0px black;    	 
-}
 
-.p-0.col-2:not(.pathTile):not(.patator):not(.bg-secondary):not(.broken_glass):not(.potato_field):not(.sniper){
-	background-image: url(img/grass.png);
-	background-size: 100%;
-}
-
-.col-3.col-sm-6:not(.text-right),.col-3.col-sm-12{
-	display:flex;
-	align-items:center;
-	justify-content: center;
-}
-
-.col-3.col-sm-12{
-	background-color:#333;
-	color:white;
-}
-
-.col-3.col-sm-6{
-	border-radius:10px;
-	background-image:linear-gradient(lightcyan,white);
-	border: 3px inset #227;
-	cursor: pointer;
-}
-
-.potato_field > div{
-	color:white;
-	font-weight:bold;
-}
 
 
 

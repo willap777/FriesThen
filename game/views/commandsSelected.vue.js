@@ -5,18 +5,45 @@ import commandLifeTile from './commandLifeTile.vue.js';
 export default  {
     data: function (){
       return{
-	  iGame : Game,
-   	  text : Game.locale.text,
+	  	iGame : Game,
+		text : Game.locale.text,
+		isHorizontal:window.screen.width/window.screen.height>1,
+		commandClass:this.getCommandClass(window.screen.width/window.screen.height>1),
+		commandsHeaderClass:this.getCommandsHeaderClass(window.screen.width/window.screen.height>1)
       }
 	},
-	computed:{
-		getScreenWidth:function(){
-			return window.screen.width;
+	created(){
+		window.addEventListener("resize", this.handleChange);
+	},
+	destroyed(){
+		window.removeEventListener("resize", this.handleChange);
+	},
+	methods:{
+		handleChange(){
+			let isHorizontal=window.screen.width/window.screen.height>1;
+			this.isHorizontal=isHorizontal;
+			this.commandClass=this.getCommandClass(isHorizontal);
+			this.commandsHeaderClass=this.getCommandsHeaderClass(isHorizontal);
 		},
-		headerFontSize:function(){
-			return {
-				fontSize:this.getScreenWidth<1000?'10px':'30px'
-			}
+		getCommandClass:function(isHorizontal){
+			let cls=""
+			if(isHorizontal)
+				cls += "col-6 h-25";
+			else
+				cls +=  "col-3 h-50";
+				
+			cls += ' d-flex justify-content-center align-items-center bg-light rounded border border primary';
+			return cls;
+		},
+		getCommandsHeaderClass:function(isHorizontal){
+			let cls=""
+			if(isHorizontal)
+				cls += "col-12 h-25";
+			else
+				cls +=  "col-3 h-50";
+				
+			cls += ' d-flex justify-content-center align-items-center bg-dark text-white';
+			return cls;
 		}
 	},
     components:{
@@ -24,34 +51,34 @@ export default  {
     },
     template: `
 	<div>
-		<div class="col-3 col-sm-12" :style="headerFontSize">
+		<div :class=commandsHeaderClass>
 			<b>{{text.selectedMenu}}</b>
 		</div>
 
-		<div class="col-3 col-sm-6"  v-on:click="iGame.buy('patator')">
+		<div :class=commandClass  v-on:click="iGame.buy('patator')">
 			{{ text.patator }}
 			50$
 		</div>
 
-		<div class="col-3 col-sm-6" v-on:click="iGame.buy('sniper')">
+		<div :class=commandClass v-on:click="iGame.buy('sniper')">
 			{{ text.sniper }}	
 			125$		
 		</div>
 
-		<div class="col-3 col-sm-6">
+		<div :class=commandClass>
 			
 		</div>
 
-		<div class="col-3 col-sm-6">
+		<div :class=commandClass>
 			
 		</div>
 
-		<div class="col-3 col-sm-6"  v-on:click="iGame.buy('potato_field')">
+		<div :class=commandClass  v-on:click="iGame.buy('potato_field')">
 			{{ text.potato_field }}
 			150$
 		</div>
 
-		<div class="col-3 col-sm-6" v-if="getScreenWidth<700">
+		<div :class=commandClass v-if="!isHorizontal">
 				
 		</div>
 
