@@ -16,7 +16,7 @@ export default  {
     },
     template: `
 	<div>
-		<div :class=commandsHeaderClass>
+		<div :style={fontSize:commandsHeaderFontSize} :class=commandsHeaderClass>
 			<b>{{text.selectedMenu}}</b>
 		</div>
 

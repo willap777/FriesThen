@@ -31,7 +31,7 @@ export default  {
     },
     template: `
 	<div>
-		<div :class=commandsHeaderClass>
+		<div :style={fontSize:commandsHeaderFontSize} :class=commandsHeaderClass>
 			<b>{{text.pathMenu}}</b>
 		</div>
 		<div :class=commandClass v-on:click="iGame.buy('broken_glass')">

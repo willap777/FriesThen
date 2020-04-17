@@ -36,23 +36,24 @@ export default {
             marginBottom: screenRatio>1?'2vmin':'2vmax'
           },
           mapSelectStyle:{
-            width: screenRatio>1?1/screenRatio*60+'vmax':'60vmin',
-            height: screenRatio>1?'40vmin':'30vmax',
+            width: screenRatio>1?1/screenRatio*55+'vmax':'60vmin',
+            height: screenRatio>1?'45vmin':'35vmax',
           },
           mapTitleStyle:{
             fontSize:'4vmin',
-            marginBottom:'3%'
+            marginBottom:'3vmin'
           },
           mapContainerStyle:{
-            width: '80%',            
-            height: '70%',
-            maxHeight: '70%'
+            width: '80%',
+            padding:'2vmin',
+            maxHeight:screenRatio>1?'30vmin':'38vmin'
           },
           mapOptionStyle:{
-            fontSize:'3vmin'
+            fontSize:'3vmin',
+            padding:'1vmin'
           },
           btnSuccessStyle:{
-            fontSize:screenRatio>1?'3vmin':'2vmax',
+            fontSize:'3vmin',
             margin: screenRatio>1?'3vmin':'6vmax'
           },
           btnSecStyle:{

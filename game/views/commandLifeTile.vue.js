@@ -5,7 +5,7 @@ export default {
     	return {
 	    iGame : Game,
 	   game : Game.state,
-	   commandClass:this.getCommandClass(window.screen.width/window.screen.height>1)
+	   commandClass:this.getCommandClass(window.innerWidth/window.innerHeight>1)
 	}
 	},
 	created(){
@@ -16,7 +16,7 @@ export default {
 	},
 	methods:{
 		handleChange(){
-			let isHorizontal = window.screen.width/window.screen.height>1;
+			let isHorizontal = window.innerWidth/window.innerHeight>1;
 			this.commandClass=this.getCommandClass(isHorizontal)
 		},
 		getCommandClass:function(isHorizontal){

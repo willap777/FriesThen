@@ -1,9 +1,10 @@
 export default{
     data:function(){
         return{
-            isHorizontal:window.screen.width/window.screen.height>1,
-            commandClass:this.getCommandClass(window.screen.width/window.screen.height>1),
-            commandsHeaderClass:this.getCommandsHeaderClass(window.screen.width/window.screen.height>1)
+            isHorizontal:window.innerWidth/window.innerHeight>1,
+            commandsHeaderFontSize: window.innerWidth/window.innerHeight>1?'5vmin':'3vmin',
+            commandClass:this.getCommandClass(window.innerWidth/window.innerHeight>1),
+            commandsHeaderClass:this.getCommandsHeaderClass(window.innerWidth/window.innerHeight>1)
         }
     },
     created(){
@@ -15,10 +16,11 @@ export default{
     methods:{
 
         handleChange(){
-			let isHorizontal=window.screen.width/window.screen.height>1;
+			let isHorizontal=window.innerWidth/window.innerHeight>1;
 			this.isHorizontal=isHorizontal;
 			this.commandClass=this.getCommandClass(isHorizontal);
-			this.commandsHeaderClass=this.getCommandsHeaderClass(isHorizontal);
+            this.commandsHeaderClass=this.getCommandsHeaderClass(isHorizontal);
+            this.commandsHeaderFontSize=isHorizontal?'5vmin':'3vmin';
 		},
 		getCommandClass:function(isHorizontal){
 			let cls=""

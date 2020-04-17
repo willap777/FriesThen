@@ -26,7 +26,7 @@ export default  {
     },
     template: `
 	<div>
-		<div :class=commandsHeaderClass>
+		<div :style={fontSize:commandsHeaderFontSize} :class=commandsHeaderClass>
 			<b>{{text.lastMenu}}</b>
 		</div>
 		<div :class=commandClass>

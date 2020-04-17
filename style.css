@@ -48,9 +48,6 @@
 }
 
 #play-box > div{
-	background:white;
-	height:calc(13.5vmin - 1px);
-	width:81vmin;
 	margin:auto;
 }
 
@@ -63,7 +60,7 @@
 	border-radius:10px;
 	background-image:linear-gradient(lightcyan,white);
 	border: 3px inset #227;
-	font-size:2vmin;
+	font-size:3vmin;
 	cursor: pointer;
 }
 
@@ -191,11 +188,6 @@
 	font-size:initial;
 }
 
-#play-box > div{
-	height:calc(10vmin - 1px);
-	width:60vmin;
-}
-
 #oil_rain{
 	background:url('img/oil_rain.png');
 	z-index:1001;
@@ -212,6 +204,20 @@
 /*medium...*/
 @media (min-width: 768px){
 
+}
+
+/*iPhone5 et moins horizontalement*/
+@media (max-height: 325px){
+	
+	#oil_rain{
+		background:url('img/oil_rain.png');
+		z-index:1001;
+		position:absolute;
+		background-size:100%;
+		width:60vmin;
+		height:calc(80vmin - 8px);
+		pointer-events: none;
+	}
 }
 
 
