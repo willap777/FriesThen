@@ -29,7 +29,7 @@ export default {
 		},
 		getPlayBoxClass:function(isHorizontal){
 			if(isHorizontal)
-				return "col-9 text-center h-100";
+				return "col-9 col-sm-9 col-md-9 col-lg-9 text-center h-100";
 			else
 				return "text-center w-100 h-75"
 		},
